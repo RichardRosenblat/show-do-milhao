@@ -1,15 +1,14 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { ObjectId } from 'bson';
-import { plainToInstance } from 'class-transformer';
-import { Collection, Document } from 'mongodb';
+import { Collection, Document, WithId } from 'mongodb';
 import { DatabaseConnection } from 'src/database/database.type';
+import { AnsweredQuestionDataDTO } from '../dto/answeredQuestionData.dto';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
-import { User } from '../entitity/user.entity';
-import { AnsweredQuestionDataDTO } from '../dto/answeredQuestionData.dto';
-import { instanceToPlain } from 'class-transformer';
 import { HelpUsedEnum } from '../enum/helpUsed.enum';
 import { TimeMarkTypeEnum } from '../enum/timeMarkType.enum';
+import { mongoDbDocumentToUserEntity } from '../mapper/mongoDbDocumentToUserEntity';
+import { User } from '../entitity/user.entity';
 
 @Injectable()
 export class UsersRepository {
@@ -22,12 +21,13 @@ export class UsersRepository {
   }
 
   async listAll() {
-    return plainToInstance(User, await this.collection.find().toArray());
+    const users = await this.collection.find().toArray();
+    return this.convertToEntity(users);
   }
 
   async findById(id: ObjectId) {
     const user = await this.collection.findOne({ _id: id });
-    return user && plainToInstance(User, user);
+    return user && this.convertToEntity(user);
   }
 
   async insert(user: CreateUserDTO) {
@@ -75,7 +75,8 @@ export class UsersRepository {
   }
 
   async doesEmailAlreadyExist(email: string) {
-    return !!(await this.collection.findOne({ email }));
+    const user = await this.collection.findOne({ email });
+    return !!(user);
   }
 
   async markTime(id: ObjectId, type: TimeMarkTypeEnum, time: Date) {
@@ -92,10 +93,19 @@ export class UsersRepository {
 
   async findByEmailAndPassword(email: string, password: string) {
     const user = await this.collection.findOne({ email, password });
-    return user && plainToInstance(User, user);
+    return user && this.convertToEntity(user);
   }
 
   async delete(id: ObjectId) {
     return (await this.collection.deleteOne({ _id: id })).deletedCount;
+  }
+
+  private convertToEntity(data: WithId<Document>): User;
+  private convertToEntity(data: WithId<Document>[]): User[];
+  private convertToEntity(data: any) {
+    if (Array.isArray(data)) {
+      return data.map((user) => mongoDbDocumentToUserEntity(user));
+    }
+    return mongoDbDocumentToUserEntity(data);
   }
 }

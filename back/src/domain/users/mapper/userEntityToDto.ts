@@ -3,7 +3,7 @@ import { User } from '../entitity/user.entity';
 
 export function userEntityToResponseDTO(user: User) {
   if (!user) {
-    return user;
+    return null;
   }
   const dto = new ResponseUserDTO();
   const { password, ...userWithoutPassword } = user;

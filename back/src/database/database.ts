@@ -1,10 +1,9 @@
-import { Db, MongoClient } from 'mongodb';
 import {
-  InternalServerErrorException,
-  OnApplicationShutdown,
   Injectable,
-  Logger,
+  InternalServerErrorException,
+  Logger
 } from '@nestjs/common';
+import { Db, MongoClient } from 'mongodb';
 import { DatabaseConnection } from './database.type';
 
 @Injectable()

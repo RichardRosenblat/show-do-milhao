@@ -48,7 +48,7 @@ export class UpdateUserDTO implements Partial<User> {
   @IsArray()
   @IsOptional()
   answered_questions?: ObjectId[];
-  
+
   @IsOptional()
   @IsInt()
   correct_answers?: number;
@@ -67,6 +67,7 @@ export class UpdateUserDTO implements Partial<User> {
   start_date?: Date;
 
   @IsObject()
+  @IsOptional()
   active_question?: ObjectId;
 
   @ValidateNested()

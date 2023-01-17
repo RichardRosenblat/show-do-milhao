@@ -1,18 +1,19 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { ObjectID } from 'bson';
 import { Collection, Document } from 'mongodb';
-import { DatabaseConnection } from '../../../database/database';
+import { DatabaseConnectionImplementation } from '../../../database/database';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
 import { AnsweredQuestionData } from '../types/answeredQuestionData.type';
 import { User } from '../entitity/user.entity';
 import { plainToInstance } from 'class-transformer';
+import { DatabaseConnection } from 'src/database/database.type';
 
 @Injectable()
 export class UsersRepository {
   private collection: Collection<Document>;
 
-  constructor(databaseConnection: DatabaseConnection) {
+  constructor(@Inject('DatabaseConnection') databaseConnection: DatabaseConnection) {
     this.collection = databaseConnection.database.collection('Users');
   }
 

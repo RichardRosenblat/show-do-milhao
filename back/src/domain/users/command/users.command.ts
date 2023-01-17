@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { UsersRepository } from '../repository/users.repository';
 import { User } from '../entitity/user.entity';
-import { userEntityToResponseDTO } from '../mapper/userEntityToDto';
 import { ObjectID } from 'bson';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
 import { AnsweredQuestionData } from '../types/answeredQuestionData.type';
+import { userEntityToResponseDTO } from '../mapper/userEntityToDto';
 
 @Injectable()
 export class UsersCommand {

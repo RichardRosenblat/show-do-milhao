@@ -1,10 +1,8 @@
 import { Module } from '@nestjs/common';
 import { InfraModule } from './database/infra.module';
-import { UsersModule } from './domain/users/users.module';
+import { QuestionsModule } from '../src/domain/questions/questions.module';
 
 @Module({
-  imports: [InfraModule, UsersModule],
-  controllers: [],
-  providers: [],
+  imports: [QuestionsModule, InfraModule],
 })
 export class AppModule {}

@@ -1,15 +1,20 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { UsersRepository } from '../repository/users.repository';
 import { User } from '../entitity/user.entity';
 import { ObjectId } from 'bson';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
-import { AnsweredQuestionDataDTO } from '../dto/answeredQuestionData.dto';
+import { AnswerDataDTO } from '../dto/answerData.dto';
 import { userEntityToResponseDTO } from '../mapper/userEntityToDto';
 import { HelpUsedEnum } from '../enum/helpUsed.enum';
 import { TimeMarkTypeEnum } from '../enum/timeMarkType.enum';
 import { ResponseUserDTO } from '../dto/responseUser.dto';
 import { ErrorsEnum } from '../enum/errors.enum';
+import { TimeMarkDTO } from '../dto/timeMark.dto';
 
 @Injectable()
 export class UsersCommand {
@@ -18,9 +23,10 @@ export class UsersCommand {
   async listAll() {
     return this.convertToDTO(await this.repository.listAll());
   }
-  async findById(id: ObjectId) {
-
-    const user = ObjectId.isValid(id) && await this.repository.findById(id);
+  async findById(id: string) {
+    const user =
+      ObjectId.isValid(id) &&
+      (await this.repository.findById(new ObjectId(id)));
     if (!user) {
       throw new NotFoundException(ErrorsEnum.USER_NOT_FOUND);
     }
@@ -30,39 +36,70 @@ export class UsersCommand {
     const createdUser = await this.repository.insert(user);
     return this.convertToDTO(createdUser);
   }
-  async update(id: ObjectId, user: UpdateUserDTO) {
+  async update(id: string, user: UpdateUserDTO) {
     await this.findById(id);
-    const updatedUser = await this.repository.update(id, user);
+    const updatedUser = await this.repository.update(new ObjectId(id), user);
     return this.convertToDTO(updatedUser);
   }
-  async delete(id: ObjectId) {
+  async delete(id: string) {
     await this.findById(id);
-    return await this.repository.delete(id);
+    return await this.repository.delete(new ObjectId(id));
   }
 
-  async addAnsweredQuestion(
-    id: ObjectId,
-    questionData: AnsweredQuestionDataDTO,
-  ) {
+  async addAnsweredQuestion(id: string, answerData: AnswerDataDTO) {
     await this.findById(id);
-    const user = await this.repository.addAnsweredQuestion(id, questionData);
+    const user = await this.repository.addAnsweredQuestion(
+      new ObjectId(id),
+      answerData,
+    );
     return this.convertToDTO(user);
   }
-  async useHelp(id: ObjectId, help_used: HelpUsedEnum) {
+  async useHelp(id: string, help_used: string) {
+    if (!HelpUsedEnum[help_used]) {
+      throw new BadRequestException('Help type must be either cards or skips');
+    }
+
     await this.findById(id);
-    const user = await this.repository.useHelp(id, help_used);
+    const user = await this.repository.useHelp(
+      new ObjectId(id),
+      HelpUsedEnum[help_used],
+    );
     return this.convertToDTO(user);
   }
+  async markTime(id: string, type: string, time: Date) {
+    if (!TimeMarkTypeEnum[type]) {
+      throw new BadRequestException(
+        'Help type must be either start or finish',
+      );
+    }
+
+    await this.findById(id);
+    return this.convertToDTO(
+      await this.repository.markTime(
+        new ObjectId(id),
+        TimeMarkTypeEnum[type],
+        time,
+      ),
+    );
+  }
+  async resetUserData(id: string) {
+    return this.update(id, {
+      active_question: null,
+      answered_questions: [],
+      errors: 0,
+      correct_answers: 0,
+      finished_date: null,
+      start_date: null,
+      helps_used: { cards: 0, skips: 0 },
+    });
+  }
+  
   async findByEmail(email: string) {
     const user = await this.repository.findByEmail(email);
     if (!user) {
       throw new NotFoundException(ErrorsEnum.USER_NOT_FOUND);
     }
     return this.convertToDTO(user);
-  }
-  async markTime(id: ObjectId, type: TimeMarkTypeEnum, time: Date) {
-    await this.findById(id);
-    return this.convertToDTO(await this.repository.markTime(id, type, time));
   }
 
   private convertToDTO(data: User): ResponseUserDTO;

@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { ObjectId } from 'bson';
 import { Collection, Document, WithId } from 'mongodb';
 import { DatabaseConnection } from 'src/database/database.type';
-import { AnsweredQuestionDataDTO } from '../dto/answeredQuestionData.dto';
+import { AnswerDataDTO } from '../dto/answerData.dto';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
 import { HelpUsedEnum } from '../enum/helpUsed.enum';
@@ -43,24 +43,23 @@ export class UsersRepository {
   async update(id: ObjectId, user: UpdateUserDTO) {
     const { password } = user;
 
-    const hashedPassword = password ? hashSync(password, 10) : password;
+    const hashedPasswordObj = password
+      ? { password: hashSync(password, 10) }
+      : {};
 
     await this.collection.updateOne(
       { _id: id },
-      { $set: { ...user, password: hashedPassword } },
+      { $set: { ...user, ...hashedPasswordObj } },
     );
-    
+
     return this.findById(id);
   }
   async delete(id: ObjectId) {
     return (await this.collection.deleteOne({ _id: id })).deletedCount;
   }
 
-  async addAnsweredQuestion(
-    id: ObjectId,
-    questionData: AnsweredQuestionDataDTO,
-  ) {
-    const { isCorrect, questionId, nextQuestion } = questionData;
+  async addAnsweredQuestion(id: ObjectId, answerData: AnswerDataDTO) {
+    const { isCorrect, questionId, nextQuestion } = answerData;
 
     await this.collection.updateOne(
       { _id: id },
@@ -80,7 +79,6 @@ export class UsersRepository {
       await this.collection.updateOne(
         { _id: id },
         {
-          // TODO CHECK THIS, IF AN ERROR OCCURS IT MIGHT BE THE QUOTES MISSING
           $inc: { [`helps_used.${help_used}`]: 1 },
         },
       );
@@ -88,6 +86,7 @@ export class UsersRepository {
 
     return this.findById(id);
   }
+
   async doesEmailAlreadyExist(email: string) {
     const user = await this.collection.findOne({ email });
     return !!user;

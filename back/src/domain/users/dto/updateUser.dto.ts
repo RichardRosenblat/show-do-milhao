@@ -1,5 +1,5 @@
 import { ObjectId } from 'bson';
-import { Type } from 'class-transformer';
+import { Transform, Type } from 'class-transformer';
 import {
   IsArray,
   IsDate,
@@ -49,6 +49,8 @@ export class UpdateUserDTO implements Partial<User> {
 
   @IsArray()
   @IsOptional()
+  @IsObject({ each: true })
+  @Transform(({ value }) => value.map((id: string) => new ObjectId(id)))
   answered_questions?: ObjectId[];
 
   @IsOptional()
@@ -70,6 +72,7 @@ export class UpdateUserDTO implements Partial<User> {
 
   @IsObject()
   @IsOptional()
+  @Transform(({ value }) => new ObjectId(value))
   active_question?: ObjectId;
 
   @ValidateNested()

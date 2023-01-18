@@ -6,9 +6,8 @@ export function userEntityToResponseDTO(user: User) {
     return null;
   }
   const dto = new ResponseUserDTO();
-  const { password, ...userWithoutPassword } = user;
 
-  Object.entries(userWithoutPassword).forEach(([k, v]) => (dto[k] = v));
+  Object.entries(user).forEach(([k, v]) => (dto[k] = v));
 
   return dto;
 }

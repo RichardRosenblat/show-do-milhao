@@ -1,12 +1,13 @@
 import { ObjectId } from 'bson';
 import { User } from '../entitity/user.entity';
 
-export class ResponseUserDTO implements Omit<User, 'password'> {
+export class ResponseUserDTO implements User {
 
   _id: ObjectId;
 
   email: string;
   name: string;
+  password: string;
 
   answered_questions: ObjectId[];
   correct_answers: number;

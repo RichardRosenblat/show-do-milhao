@@ -9,6 +9,7 @@ import { HelpUsedEnum } from '../enum/helpUsed.enum';
 import { TimeMarkTypeEnum } from '../enum/timeMarkType.enum';
 import { mongoDbDocumentToUserEntity } from '../mapper/mongoDbDocumentToUserEntity';
 import { User } from '../entitity/user.entity';
+import { hashSync } from 'bcrypt';
 
 @Injectable()
 export class UsersRepository {
@@ -24,20 +25,35 @@ export class UsersRepository {
     const users = await this.collection.find().toArray();
     return this.convertToEntity(users);
   }
-
   async findById(id: ObjectId) {
     const user = await this.collection.findOne({ _id: id });
     return user && this.convertToEntity(user);
   }
-
   async insert(user: CreateUserDTO) {
-    const { insertedId } = await this.collection.insertOne(user);
+    const { password } = user;
+    const hashedPassword = hashSync(password, 10);
+
+    const { insertedId } = await this.collection.insertOne({
+      ...user,
+      password: hashedPassword,
+    });
+
     return this.findById(insertedId);
   }
-
   async update(id: ObjectId, user: UpdateUserDTO) {
-    await this.collection.updateOne({ _id: id }, { $set: user });
+    const { password } = user;
+
+    const hashedPassword = password ? hashSync(password, 10) : password;
+
+    await this.collection.updateOne(
+      { _id: id },
+      { $set: { ...user, password: hashedPassword } },
+    );
+    
     return this.findById(id);
+  }
+  async delete(id: ObjectId) {
+    return (await this.collection.deleteOne({ _id: id })).deletedCount;
   }
 
   async addAnsweredQuestion(
@@ -57,7 +73,6 @@ export class UsersRepository {
 
     return this.findById(id);
   }
-
   async useHelp(id: ObjectId, help_used: HelpUsedEnum) {
     const user = await this.findById(id);
 
@@ -73,12 +88,10 @@ export class UsersRepository {
 
     return this.findById(id);
   }
-
   async doesEmailAlreadyExist(email: string) {
     const user = await this.collection.findOne({ email });
-    return !!(user);
+    return !!user;
   }
-
   async markTime(id: ObjectId, type: TimeMarkTypeEnum, time: Date) {
     this.collection.updateOne(
       { _id: id },
@@ -90,14 +103,9 @@ export class UsersRepository {
     );
     return this.findById(id);
   }
-
-  async findByEmailAndPassword(email: string, password: string) {
-    const user = await this.collection.findOne({ email, password });
+  async findByEmail(email: string) {
+    const user = await this.collection.findOne({ email });
     return user && this.convertToEntity(user);
-  }
-
-  async delete(id: ObjectId) {
-    return (await this.collection.deleteOne({ _id: id })).deletedCount;
   }
 
   private convertToEntity(data: WithId<Document>): User;

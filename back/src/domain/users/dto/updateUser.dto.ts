@@ -15,6 +15,7 @@ import {
   ValidateNested,
 } from 'class-validator';
 import { User } from '../entitity/user.entity';
+import { UniqueUserEmail } from '../validators/doesUserEmailAlreadyExist';
 
 export class helpsUsed {
   @Max(3)
@@ -32,6 +33,7 @@ export class UpdateUserDTO implements Partial<User> {
   @IsNotEmpty()
   @IsEmail()
   @IsOptional()
+  @UniqueUserEmail()
   email?: string;
 
   @IsString()

@@ -19,7 +19,8 @@ export class UsersCommand {
     return this.convertToDTO(await this.repository.listAll());
   }
   async findById(id: ObjectId) {
-    const user = await this.repository.findById(id);
+
+    const user = ObjectId.isValid(id) && await this.repository.findById(id);
     if (!user) {
       throw new NotFoundException(ErrorsEnum.USER_NOT_FOUND);
     }
@@ -34,6 +35,11 @@ export class UsersCommand {
     const updatedUser = await this.repository.update(id, user);
     return this.convertToDTO(updatedUser);
   }
+  async delete(id: ObjectId) {
+    await this.findById(id);
+    return await this.repository.delete(id);
+  }
+
   async addAnsweredQuestion(
     id: ObjectId,
     questionData: AnsweredQuestionDataDTO,
@@ -47,19 +53,12 @@ export class UsersCommand {
     const user = await this.repository.useHelp(id, help_used);
     return this.convertToDTO(user);
   }
-  async doesEmailAlreadyExist(email: string) {
-    return await this.repository.doesEmailAlreadyExist(email);
-  }
-  async findByEmailAndPassword(email: string, password: string) {
-    const user = await this.repository.findByEmailAndPassword(email, password);
+  async findByEmail(email: string) {
+    const user = await this.repository.findByEmail(email);
     if (!user) {
       throw new NotFoundException(ErrorsEnum.USER_NOT_FOUND);
     }
     return this.convertToDTO(user);
-  }
-  async delete(id: ObjectId) {
-    await this.findById(id);
-    return await this.repository.delete(id);
   }
   async markTime(id: ObjectId, type: TimeMarkTypeEnum, time: Date) {
     await this.findById(id);

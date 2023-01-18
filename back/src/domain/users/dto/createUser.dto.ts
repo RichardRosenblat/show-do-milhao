@@ -2,6 +2,7 @@ import { ObjectId } from 'bson';
 import { User } from '../entitity/user.entity';
 import { Exclude, Expose } from 'class-transformer';
 import { IsEmail, IsNotEmpty, IsString, MinLength } from 'class-validator';
+import { UniqueUserEmail } from '../validators/doesUserEmailAlreadyExist';
 
 @Exclude()
 export class CreateUserDTO implements User {
@@ -9,6 +10,7 @@ export class CreateUserDTO implements User {
   @IsString()
   @IsNotEmpty()
   @IsEmail()
+  @UniqueUserEmail()
   email: string;
 
   @Expose()

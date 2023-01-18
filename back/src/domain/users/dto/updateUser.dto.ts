@@ -15,7 +15,7 @@ import {
   ValidateNested,
 } from 'class-validator';
 import { User } from '../entitity/user.entity';
-import { UniqueUserEmail } from '../validators/doesUserEmailAlreadyExist';
+import { UniqueUserEmail } from '../validator/doesUserEmailAlreadyExist';
 
 export class helpsUsed {
   @Max(3)

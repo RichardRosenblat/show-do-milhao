@@ -1,15 +1,15 @@
 import { Inject, Injectable } from '@nestjs/common';
+import { hashSync } from 'bcrypt';
 import { ObjectId } from 'bson';
 import { Collection, Document, WithId } from 'mongodb';
 import { DatabaseConnection } from 'src/database/database.type';
 import { AnswerDataDTO } from '../dto/answerData.dto';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
+import { User } from '../entitity/user.entity';
 import { HelpUsedEnum } from '../enum/helpUsed.enum';
 import { TimeMarkTypeEnum } from '../enum/timeMarkType.enum';
 import { mongoDbDocumentToUserEntity } from '../mapper/mongoDbDocumentToUserEntity';
-import { User } from '../entitity/user.entity';
-import { hashSync } from 'bcrypt';
 
 @Injectable()
 export class UsersRepository {
@@ -73,16 +73,12 @@ export class UsersRepository {
     return this.findById(id);
   }
   async useHelp(id: ObjectId, help_used: HelpUsedEnum) {
-    const user = await this.findById(id);
-
-    if (user.helps_used[help_used] < 3) {
-      await this.collection.updateOne(
-        { _id: id },
-        {
-          $inc: { [`helps_used.${help_used}`]: 1 },
-        },
-      );
-    }
+    await this.collection.updateOne(
+      { _id: id },
+      {
+        $inc: { [`helps_used.${help_used}`]: 1 },
+      },
+    );
 
     return this.findById(id);
   }

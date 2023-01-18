@@ -3,18 +3,17 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { UsersRepository } from '../repository/users.repository';
-import { User } from '../entitity/user.entity';
 import { ObjectId } from 'bson';
-import { CreateUserDTO } from '../dto/createUser.dto';
-import { UpdateUserDTO } from '../dto/updateUser.dto';
 import { AnswerDataDTO } from '../dto/answerData.dto';
-import { userEntityToResponseDTO } from '../mapper/userEntityToDto';
+import { CreateUserDTO } from '../dto/createUser.dto';
+import { ResponseUserDTO } from '../dto/responseUser.dto';
+import { UpdateUserDTO } from '../dto/updateUser.dto';
+import { User } from '../entitity/user.entity';
+import { ErrorsEnum } from '../enum/errors.enum';
 import { HelpUsedEnum } from '../enum/helpUsed.enum';
 import { TimeMarkTypeEnum } from '../enum/timeMarkType.enum';
-import { ResponseUserDTO } from '../dto/responseUser.dto';
-import { ErrorsEnum } from '../enum/errors.enum';
-import { TimeMarkDTO } from '../dto/timeMark.dto';
+import { userEntityToResponseDTO } from '../mapper/userEntityToDto';
+import { UsersRepository } from '../repository/users.repository';
 
 @Injectable()
 export class UsersCommand {
@@ -47,30 +46,42 @@ export class UsersCommand {
   }
 
   async addAnsweredQuestion(id: string, answerData: AnswerDataDTO) {
-    await this.findById(id);
-    const user = await this.repository.addAnsweredQuestion(
+    const { errors } = await this.findById(id);
+
+    if (!(errors < 3)) {
+      throw new BadRequestException(ErrorsEnum.TOO_MANY_MISTAKES);
+    }
+
+    const users = await this.repository.addAnsweredQuestion(
       new ObjectId(id),
       answerData,
     );
-    return this.convertToDTO(user);
+
+    return this.convertToDTO(users);
   }
   async useHelp(id: string, help_used: string) {
-    if (!HelpUsedEnum[help_used]) {
-      throw new BadRequestException('Help type must be either cards or skips');
+    const helpUsedType = HelpUsedEnum[help_used];
+
+    if (!helpUsedType) {
+      throw new BadRequestException(ErrorsEnum.WRONG_HELP_TYPE);
     }
 
-    await this.findById(id);
-    const user = await this.repository.useHelp(
+    const user = await this.findById(id);
+
+    if (!(user.helps_used[helpUsedType] < 3)) {
+      throw new BadRequestException(ErrorsEnum.TOO_MANY_HELPS);
+    }
+
+    const helpedUser = await this.repository.useHelp(
       new ObjectId(id),
-      HelpUsedEnum[help_used],
+      helpUsedType,
     );
-    return this.convertToDTO(user);
+    return this.convertToDTO(helpedUser);
   }
   async markTime(id: string, type: string, time: Date) {
-    if (!TimeMarkTypeEnum[type]) {
-      throw new BadRequestException(
-        'Help type must be either start or finish',
-      );
+    const timeMarkType = TimeMarkTypeEnum[type];
+    if (!timeMarkType) {
+      throw new BadRequestException(ErrorsEnum.WRONG_TIME_MARK_TYPE);
     }
 
     await this.findById(id);
@@ -93,7 +104,7 @@ export class UsersCommand {
       helps_used: { cards: 0, skips: 0 },
     });
   }
-  
+
   async findByEmail(email: string) {
     const user = await this.repository.findByEmail(email);
     if (!user) {

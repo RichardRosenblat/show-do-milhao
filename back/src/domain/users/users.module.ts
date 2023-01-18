@@ -1,11 +1,12 @@
 import { Module } from '@nestjs/common';
 import { UsersCommand } from './command/users.command';
-import { UsersController } from './controller/users.controller';
+import { UsersActionsController } from './controller/usersActions.controller';
 import { UsersRepository } from './repository/users.repository';
-import { doesUserEmailExists } from './validators/doesUserEmailAlreadyExist';
+import { doesUserEmailExists } from './validator/doesUserEmailAlreadyExist';
+import { UsersCRUDController } from './controller/usersCRUD.controller';
 
 @Module({
-  controllers: [UsersController],
+  controllers: [UsersActionsController, UsersCRUDController],
   providers: [UsersRepository, UsersCommand, doesUserEmailExists],
 })
 export class UsersModule {}

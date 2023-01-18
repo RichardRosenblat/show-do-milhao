@@ -1,42 +1,65 @@
-import { Injectable } from '@nestjs/common';
-import { ObjectID } from 'bson';
-import { Collection, Document } from 'mongodb';
-import { DatabaseConnection } from '../../../database/database';
+import { Inject, Injectable } from '@nestjs/common';
+import { hashSync } from 'bcrypt';
+import { ObjectId } from 'bson';
+import { Collection, Document, WithId } from 'mongodb';
+import { DatabaseConnection } from '../../../database/database.type';
+import { AnswerDataDTO } from '../dto/answerData.dto';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
-import { AnsweredQuestionData } from '../types/answeredQuestionData.type';
 import { User } from '../entitity/user.entity';
-import { plainToInstance } from 'class-transformer';
+import { HelpUsedEnum } from '../enum/helpUsed.enum';
+import { TimeMarkTypeEnum } from '../enum/timeMarkType.enum';
+import { mongoDbDocumentToUserEntity } from '../mapper/mongoDbDocumentToUserEntity';
 
 @Injectable()
 export class UsersRepository {
   private collection: Collection<Document>;
 
-  constructor(databaseConnection: DatabaseConnection) {
+  constructor(
+    @Inject('DatabaseConnection') databaseConnection: DatabaseConnection,
+  ) {
     this.collection = databaseConnection.database.collection('Users');
   }
 
   async listAll() {
-    return plainToInstance(User, await this.collection.find().toArray());
+    const users = await this.collection.find().toArray();
+    return this.convertToEntity(users);
   }
-
-  async findById(id: ObjectID) {
+  async findById(id: ObjectId) {
     const user = await this.collection.findOne({ _id: id });
-    return user && plainToInstance(User, user);
+    return user && this.convertToEntity(user);
   }
-
   async insert(user: CreateUserDTO) {
-    await this.collection.insertOne(user);
-    return this.findById(user._id);
-  }
+    const { password } = user;
+    const hashedPassword = hashSync(password, 10);
 
-  async update(id: ObjectID, user: UpdateUserDTO) {
-    await this.collection.updateOne({ _id: id }, { $set: user });
+    const { insertedId } = await this.collection.insertOne({
+      ...user,
+      password: hashedPassword,
+    });
+
+    return this.findById(insertedId);
+  }
+  async update(id: ObjectId, user: UpdateUserDTO) {
+    const { password } = user;
+
+    const hashedPasswordObj = password
+      ? { password: hashSync(password, 10) }
+      : {};
+
+    await this.collection.updateOne(
+      { _id: id },
+      { $set: { ...user, ...hashedPasswordObj } },
+    );
+
     return this.findById(id);
   }
+  async delete(id: ObjectId) {
+    return (await this.collection.deleteOne({ _id: id })).deletedCount;
+  }
 
-  async addAnsweredQuestion(id: ObjectID, questionData: AnsweredQuestionData) {
-    const { isCorrect, questionId, nextQuestion } = questionData;
+  async addAnsweredQuestion(id: ObjectId, answerData: AnswerDataDTO) {
+    const { isCorrect, questionId, nextQuestion } = answerData;
 
     await this.collection.updateOne(
       { _id: id },
@@ -49,44 +72,43 @@ export class UsersRepository {
 
     return this.findById(id);
   }
-
-  async useHelp(id: ObjectID, help_used: 'cards' | 'skips') {
-    const user = await this.findById(id);
-
-    if (user.helps_used[help_used] < 3) {
-      await this.collection.updateOne(
-        { _id: id },
-        {
-          // TODO CHECK THIS, IF AN ERROR OCCURS IT MIGHT BE THE QUOTES MISSING
-          $inc: { [`helps_used.${help_used}`]: 1 },
-        },
-      );
-    }
+  async useHelp(id: ObjectId, help_used: HelpUsedEnum) {
+    await this.collection.updateOne(
+      { _id: id },
+      {
+        $inc: { [`helps_used.${help_used}`]: 1 },
+      },
+    );
 
     return this.findById(id);
   }
 
   async doesEmailAlreadyExist(email: string) {
-    return !!(await this.collection.findOne({ email }));
+    const user = await this.collection.findOne({ email });
+    return !!user;
   }
-
-  async markTime(id: ObjectID, type: 'start' | 'finish', time: Date) {
+  async markTime(id: ObjectId, type: TimeMarkTypeEnum, time: Date) {
     this.collection.updateOne(
       { _id: id },
       {
         $set: {
-          [`${type === 'start' ? 'start' : 'finished'}_date`]: time,
+          [`${type}_date`]: time,
         },
       },
     );
+    return this.findById(id);
+  }
+  async findByEmail(email: string) {
+    const user = await this.collection.findOne({ email });
+    return user && this.convertToEntity(user);
   }
 
-  async findByEmailAndPassword(email: string, password: string) {
-    const user = await this.collection.findOne({ email, password });
-    return user && plainToInstance(User, user);
-  }
-
-  async delete(id: ObjectID) {
-    return (await this.collection.deleteOne({ _id: id })).deletedCount;
+  private convertToEntity(data: WithId<Document>): User;
+  private convertToEntity(data: WithId<Document>[]): User[];
+  private convertToEntity(data: any) {
+    if (Array.isArray(data)) {
+      return data.map((user) => mongoDbDocumentToUserEntity(user));
+    }
+    return mongoDbDocumentToUserEntity(data);
   }
 }

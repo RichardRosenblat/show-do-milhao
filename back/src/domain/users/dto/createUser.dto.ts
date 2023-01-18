@@ -1,22 +1,40 @@
 import { ObjectId } from 'bson';
 import { User } from '../entitity/user.entity';
+import { Exclude, Expose } from 'class-transformer';
+import { IsEmail, IsNotEmpty, IsString, MinLength } from 'class-validator';
+import { UniqueUserEmail } from '../validator/doesUserEmailAlreadyExist';
 
+@Exclude()
 export class CreateUserDTO implements User {
+  @Expose()
+  @IsString()
+  @IsNotEmpty()
+  @IsEmail()
+  @UniqueUserEmail()
   email: string;
+
+  @Expose()
+  @IsString()
+  @IsNotEmpty()
   name: string;
+
+  @Expose()
+  @IsString()
+  @IsNotEmpty()
+  @MinLength(8)
   password: string;
 
-  readonly _id: ObjectId = new ObjectId();
-  readonly answered_questions: ObjectId[] = [];
-  readonly correct_answers: number = 0;
-  readonly errors: number = 0;
+  _id: ObjectId = new ObjectId();
+  answered_questions: ObjectId[] = [];
+  correct_answers: number = 0;
+  errors: number = 0;
 
-  readonly finished_date: Date = null;
-  readonly start_date: Date = null;
+  finished_date: Date = null;
+  start_date: Date = null;
 
-  readonly active_question: ObjectId = null;
+  active_question: ObjectId = null;
 
-  readonly helps_used: {
+  helps_used: {
     cards: number;
     skips: number;
   } = {

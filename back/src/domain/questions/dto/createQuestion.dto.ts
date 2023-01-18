@@ -1,5 +1,5 @@
 import { ObjectId } from 'bson';
-import { Type } from 'class-transformer';
+import { Exclude, Type } from 'class-transformer';
 import {
   IsNotEmpty,
   IsString,
@@ -11,12 +11,16 @@ import {
   ArrayMaxSize,
   ArrayMinSize,
   IsObject,
+  Min,
+  Max,
 } from 'class-validator';
+import { Question } from '../entities/question.entity';
 
-export class CreateQuestionDto {
+export class CreateQuestionDTO implements Question{
   @IsNotEmpty()
   @IsObject()
-  _id: ObjectId;
+  @Exclude()
+  _id: ObjectId = new ObjectId();
 
   @IsNotEmpty()
   @IsString()
@@ -28,6 +32,8 @@ export class CreateQuestionDto {
 
   @IsOptional()
   @IsInt()
+  @Min(1)
+  @Max(10)
   level: number;
 
   @IsNotEmpty()
@@ -38,16 +44,16 @@ export class CreateQuestionDto {
   @ArrayMaxSize(4)
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Answers)
-  answers: Answers[];
+  @Type(() => CreateAnswerDTO)
+  answers: CreateAnswerDTO[];
 }
 
-export class Answers {
+export class CreateAnswerDTO {
   @IsNotEmpty()
   @IsString()
   text: string;
 
   @IsNotEmpty()
   @IsBoolean()
-  isCorrect: boolean;
+  isCorrect: boolean = false;
 }

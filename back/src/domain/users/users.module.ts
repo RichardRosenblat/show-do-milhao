@@ -1,10 +1,15 @@
-import { Module } from '@nestjs/common';
+import { Module, forwardRef } from '@nestjs/common';
 import { UsersCommand } from './command/users.command';
-import { UsersController } from './controller/users.controller';
+import { UsersControlsController } from './controller/usersControls.controller';
 import { UsersRepository } from './repository/users.repository';
+import { doesUserEmailExists } from './validator/doesUserEmailAlreadyExist';
+import { UsersCRUDController } from './controller/usersCRUD.controller';
+import { QuestionsModule } from '../questions/questions.module';
 
 @Module({
-  controllers: [UsersController],
-  providers: [UsersRepository, UsersCommand,],
+  controllers: [UsersControlsController, UsersCRUDController],
+  providers: [UsersRepository, UsersCommand, doesUserEmailExists],
+  imports: [forwardRef(() => QuestionsModule)],
+  exports: [UsersCommand],
 })
 export class UsersModule {}

@@ -4,7 +4,7 @@ import { AnswerDataDTO } from '../dto/answerData.dto';
 import { TimeMarkDTO } from '../dto/timeMark.dto';
 
 @Controller('/users')
-export class UsersActionsController {
+export class UsersControlsController {
   constructor(private readonly command: UsersCommand) {}
   
   @Post('/:id/answer')

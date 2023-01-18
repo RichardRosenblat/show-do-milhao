@@ -1,5 +1,5 @@
 import { ObjectId } from 'bson';
-import { Transform, Type } from 'class-transformer';
+import { Exclude, Transform, Type } from 'class-transformer';
 import {
   IsArray,
   IsDate,
@@ -16,6 +16,8 @@ import {
 } from 'class-validator';
 import { User } from '../entitity/user.entity';
 import { UniqueUserEmail } from '../validator/doesUserEmailAlreadyExist';
+import { isExistingQuestion } from '../../questions/validator/doesQuestionExists';
+import { transformStringArrayToObjectIdArray, transformStringToObjectId } from 'src/util/ObjectIdTranform';
 
 export class helpsUsed {
   @Max(3)
@@ -50,7 +52,8 @@ export class UpdateUserDTO implements Partial<User> {
   @IsArray()
   @IsOptional()
   @IsObject({ each: true })
-  @Transform(({ value }) => value.map((id: string) => new ObjectId(id)))
+  @isExistingQuestion({ each: true })
+  @Transform(transformStringArrayToObjectIdArray)
   answered_questions?: ObjectId[];
 
   @IsOptional()
@@ -72,7 +75,8 @@ export class UpdateUserDTO implements Partial<User> {
 
   @IsObject()
   @IsOptional()
-  @Transform(({ value }) => new ObjectId(value))
+  @Transform(transformStringToObjectId)
+  @isExistingQuestion()
   active_question?: ObjectId;
 
   @ValidateNested()

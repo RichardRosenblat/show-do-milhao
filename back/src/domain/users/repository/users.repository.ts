@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { hashSync } from 'bcrypt';
 import { ObjectId } from 'bson';
 import { Collection, Document, WithId } from 'mongodb';
-import { DatabaseConnection } from 'src/database/database.type';
+import { DatabaseConnection } from '../../../database/database.type';
 import { AnswerDataDTO } from '../dto/answerData.dto';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';

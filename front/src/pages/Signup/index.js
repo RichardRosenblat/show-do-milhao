@@ -37,8 +37,6 @@ const Signup = () => {
 
   return (
     <C.Container>
-      <div className='subtitle'>SHOW DO MILHAO LEVEL UP</div>
-      <div className='bg-[#fff01f80] my-[35px] h-px w-full' />
       <div className='subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]' />
       <C.Content>
         <C.Label>Crie sua conta</C.Label>

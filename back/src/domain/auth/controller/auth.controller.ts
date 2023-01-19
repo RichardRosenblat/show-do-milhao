@@ -5,19 +5,12 @@ import { AuthService } from '../service/auth.service';
 import { Response } from 'express';
 import { userDataDTO } from '../dto/userData.dto';
 
-
-@Controller('/auth')
+@Controller('/login')
 export class AuthController {
   constructor(private authService: AuthService) {}
   @UseGuards(LocalAuthGuard)
-  @Post('/login')
+  @Post()
   async login(@Request() req: Response & { user: userDataDTO }) {
     return this.authService.login(req.user);
-  }
-
-  @UseGuards(JwtAuthGuard)
-  @Get('/login')
-  getProfile() {
-    return 'chips';
   }
 }

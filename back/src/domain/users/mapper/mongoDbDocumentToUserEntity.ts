@@ -2,7 +2,7 @@ import { Document, WithId } from 'mongodb';
 import { User } from '../entitity/user.entity';
 
 type userLike = {
-  [key in keyof User]: any;
+  [key in keyof User]: unknown;
 };
 
 export function mongoDbDocumentToUserEntity(data: WithId<Document>) {

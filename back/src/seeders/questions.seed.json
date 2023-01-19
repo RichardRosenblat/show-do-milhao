@@ -1,0 +1,2501 @@
+[
+  {
+    "text": "o q é via lactea",
+    "category": "ciencias",
+    "level": 1,
+    "hint": "é espacial!",
+    "answers": [
+      {
+        "text": "marca de leite",
+        "isCorrect": false
+      },
+      {
+        "text": "civilização antiga",
+        "isCorrect": false
+      },
+      {
+        "text": "marca de carro",
+        "isCorrect": false
+      },
+      {
+        "text": "galaxia",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Quem era o homem mais sedutor do mundo?",
+    "category": "conhecimentos gerais",
+    "level": 1,
+    "hint": "apareceu pela primeira vez no drama espanhol",
+    "answers": [
+      {
+        "text": "DOM JUAN",
+        "isCorrect": true
+      },
+      {
+        "text": "DOM ANTÔNIO",
+        "isCorrect": false
+      },
+      {
+        "text": "DOM MARCO",
+        "isCorrect": false
+      },
+      {
+        "text": "DOM CARLOS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": " De quantos anos é constituído um século?",
+    "category": "matemática",
+    "level": 1,
+    "hint": "o século XX vai de 1º de janeiro de 1901 à 31 de dezembro de 2000.",
+    "answers": [
+      {
+        "text": "50",
+        "isCorrect": false
+      },
+      {
+        "text": "100",
+        "isCorrect": true
+      },
+      {
+        "text": "1.000",
+        "isCorrect": false
+      },
+      {
+        "text": "1.500",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o coletivo de cães?",
+    "category": "português",
+    "level": 1,
+    "hint": "é um grupo social de caninos da mesma espécie",
+    "answers": [
+      {
+        "text": "MATILHA",
+        "isCorrect": true
+      },
+      {
+        "text": "REBANHO",
+        "isCorrect": false
+      },
+      {
+        "text": "CARDUME",
+        "isCorrect": false
+      },
+      {
+        "text": "MANADA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Segundo a Bíblia, em que rio Jesus foi batizado por João Batista?",
+    "category": "conhecimentos gerais",
+    "level": 1,
+    "hint": "Lucas capitulo 3 versiculos 21-22",
+    "answers": [
+      {
+        "text": "NO RIO NILO",
+        "isCorrect": false
+      },
+      {
+        "text": "NO RIO SENA",
+        "isCorrect": false
+      },
+      {
+        "text": "NO RIO RENO",
+        "isCorrect": false
+      },
+      {
+        "text": "NO RIO JORDÃO",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é a maior floresta do planeta?",
+    "category": "geografia",
+    "level": 1,
+    "hint": "esta localizada no Brasil",
+    "answers": [
+      {
+        "text": "NEGRA",
+        "isCorrect": false
+      },
+      {
+        "text": "DE SHERWOOD",
+        "isCorrect": false
+      },
+      {
+        "text": "DA TIJUCA",
+        "isCorrect": false
+      },
+      {
+        "text": "AMAZÔNICA",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o naipe do baralho que tem o desenho de coração?",
+    "category": "jogos",
+    "level": 1,
+    "hint": "formato de coração",
+    "answers": [
+      {
+        "text": "OUROS",
+        "isCorrect": false
+      },
+      {
+        "text": "PAUS",
+        "isCorrect": false
+      },
+      {
+        "text": "COPAS",
+        "isCorrect": true
+      },
+      {
+        "text": "ESPADAS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual atriz estrelou no filme: “A lagoa azul”?",
+    "category": "conhecimentos gerais",
+    "level": 1,
+    "hint": "escudos",
+    "answers": [
+      {
+        "text": "ALICIA SILVERSTONE",
+        "isCorrect": false
+      },
+      {
+        "text": "BROOKE SHIELDS",
+        "isCorrect": true
+      },
+      {
+        "text": "JULIA ROBERTS",
+        "isCorrect": false
+      },
+      {
+        "text": "JESSICA LANGE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual casal foi expulso do Paraíso?",
+    "category": "conhecimentos gerais",
+    "level": 1,
+    "hint": "casal que comeu a maça",
+    "answers": [
+      {
+        "text": "SANSÃO E DALILA",
+        "isCorrect": false
+      },
+      {
+        "text": "JOSÉ E MARIA",
+        "isCorrect": false
+      },
+      {
+        "text": "SARA E ABRAÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "ADÃO E EVA",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Segundo os contos, qual animal ao ser beijado se transforma em príncipe?",
+    "category": "conhecimentos gerais",
+    "level": 1,
+    "hint": "mora proximo a lagoas",
+    "answers": [
+      {
+        "text": "CAVALO",
+        "isCorrect": false
+      },
+      {
+        "text": "CÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "GATO",
+        "isCorrect": false
+      },
+      {
+        "text": "SAPO",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o santo que só acreditou vendo?",
+    "category": "conhecimentos gerais",
+    "level": 2,
+    "hint": "duvidou que seu Mestre teria ressuscitado",
+    "answers": [
+      {
+        "text": "SANTO ANTÔNIO",
+        "isCorrect": false
+      },
+      {
+        "text": "SÃO JUDAS TADEU",
+        "isCorrect": false
+      },
+      {
+        "text": "SÃO PEDRO",
+        "isCorrect": false
+      },
+      {
+        "text": "SÃO TOMÉ",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o fruto conhecido no nordeste do Brasil como “jerimum”?",
+    "category": "conhecimentos gerais",
+    "level": 2,
+    "hint": "nome atribuído a várias espécies de plantas da família Cucurbitaceae",
+    "answers": [
+      {
+        "text": "CAJU",
+        "isCorrect": false
+      },
+      {
+        "text": "ABÓBORA",
+        "isCorrect": true
+      },
+      {
+        "text": "CHUCHU",
+        "isCorrect": false
+      },
+      {
+        "text": "COCO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Em qual parte do corpo humano são implantadas as “pontes de safena”?",
+    "category": "conhecimentos gerais",
+    "level": 2,
+    "hint": "ditado: o que os olhos não vêem o ... não sente",
+    "answers": [
+      {
+        "text": "ESTÔMAGO",
+        "isCorrect": false
+      },
+      {
+        "text": "INTESTINO",
+        "isCorrect": false
+      },
+      {
+        "text": "PULMÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "CORAÇÃO",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Como é conhecido o jogador Edmundo?",
+    "category": "esportes",
+    "level": 2,
+    "hint": "genérico",
+    "answers": [
+      {
+        "text": "TIGRÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "GATINHO",
+        "isCorrect": false
+      },
+      {
+        "text": "ANIMAL",
+        "isCorrect": true
+      },
+      {
+        "text": "COBRA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Na literatura, quem foi o criador da boneca Emília?",
+    "category": "literatura",
+    "level": 2,
+    "hint": "criou o Sítio do Picapau Amarelo",
+    "answers": [
+      {
+        "text": "MONTEIRO LOBATO",
+        "isCorrect": true
+      },
+      {
+        "text": "MAURÍCIO DE SOUZA",
+        "isCorrect": false
+      },
+      {
+        "text": "WALT DISNEY",
+        "isCorrect": false
+      },
+      {
+        "text": "JORGE AMADO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem é o primeiro substituto do Presidente?",
+    "category": "conhecimentos gerais",
+    "level": 2,
+    "hint": "do latim ..., que significa ,no lugar de",
+    "answers": [
+      {
+        "text": "VEREADOR",
+        "isCorrect": false
+      },
+      {
+        "text": "VICE-PRESIDENTE",
+        "isCorrect": true
+      },
+      {
+        "text": "SENADOR",
+        "isCorrect": false
+      },
+      {
+        "text": "DEPUTADO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Segundo o romance, que animal era “Moby Dick”?",
+    "category": "literatura",
+    "level": 2,
+    "hint": "maior mamífero",
+    "answers": [
+      {
+        "text": "TUBARÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "GOLFINHO",
+        "isCorrect": false
+      },
+      {
+        "text": "POLVO",
+        "isCorrect": false
+      },
+      {
+        "text": "BALEIA",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o animal que representa o signo de áries?",
+    "category": "conhecimentos gerais",
+    "level": 2,
+    "hint": "é o responsável por coordenar o rebanho",
+    "answers": [
+      {
+        "text": "TOURO",
+        "isCorrect": false
+      },
+      {
+        "text": "LEÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "CARNEIRO",
+        "isCorrect": true
+      },
+      {
+        "text": "BODE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Que animal é o Pateta?",
+    "category": "conhecimentos gerais",
+    "level": 2,
+    "hint": "familia dos caninos",
+    "answers": [
+      {
+        "text": "CAVALO",
+        "isCorrect": false
+      },
+      {
+        "text": "BURRO",
+        "isCorrect": false
+      },
+      {
+        "text": "CACHORRO",
+        "isCorrect": true
+      },
+      {
+        "text": "RAPOSA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Em qual cidade está o Cristo Redentor do Corcovado?",
+    "category": "conhecimentos gerais",
+    "level": 2,
+    "hint": "recebe o título de Cidade Maravilhosa",
+    "answers": [
+      {
+        "text": "RIO DE JANEIRO",
+        "isCorrect": true
+      },
+      {
+        "text": " SÃO PAULO",
+        "isCorrect": false
+      },
+      {
+        "text": " CURITIBA",
+        "isCorrect": false
+      },
+      {
+        "text": " BELO HORIZONTE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem é conhecido como o “playboy brasileiro”?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "não é musico",
+    "answers": [
+      {
+        "text": "JOÃOZINHO TRINTA",
+        "isCorrect": false
+      },
+      {
+        "text": "ZECA PAGODINHO",
+        "isCorrect": false
+      },
+      {
+        "text": "CHIQUINHO SCARPA",
+        "isCorrect": false
+      },
+      {
+        "text": "CHICO BUARQUE",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Quantos centímetros equivalem a um metro?",
+    "category": "matemática",
+    "level": 3,
+    "hint": "conversão de unidade",
+    "answers": [
+      {
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "text": "100",
+        "isCorrect": true
+      },
+      {
+        "text": "1000",
+        "isCorrect": false
+      },
+      {
+        "text": "10000",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o nome do macho da abelha?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "personagem similar entre os 7 anões",
+    "answers": [
+      {
+        "text": "ZÂNGÃO",
+        "isCorrect": true
+      },
+      {
+        "text": "ABELHÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "RUFIÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "PULGÃO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o inseto que transmite a doença de Chagas?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "também é profissão",
+    "answers": [
+      {
+        "text": "ABELHA",
+        "isCorrect": false
+      },
+      {
+        "text": "BARATA",
+        "isCorrect": false
+      },
+      {
+        "text": "BARBEIRO",
+        "isCorrect": true
+      },
+      {
+        "text": "PULGA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o nome do conjunto de dados estatísticos sobre uma população?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "a palavra ... vem do latim e quer dizer \"conjunto dos dados estatísticos dos habitantes de uma cidade, província, estado, nação\"",
+    "answers": [
+      {
+        "text": "CENSO",
+        "isCorrect": false
+      },
+      {
+        "text": "CONTAGEM",
+        "isCorrect": false
+      },
+      {
+        "text": "MARCAÇÃO",
+        "isCorrect": false
+      },
+      {
+        "text": "REGISTRO",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Qual ator imortalizou o personagem “Zé Bonitinho”?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "trabalhou em a praça é nossa",
+    "answers": [
+      {
+        "text": "RONI CÓCEGAS",
+        "isCorrect": false
+      },
+      {
+        "text": "JORGE LOREDO",
+        "isCorrect": true
+      },
+      {
+        "text": "DAVI PINHEIRO",
+        "isCorrect": false
+      },
+      {
+        "text": "ARNAUD RODRIGUES",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual a cantora conhecida como “A rainha dos caminhoneiros”?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "cantora sertanejo",
+    "answers": [
+      {
+        "text": " ROBERTA MIRANDA",
+        "isCorrect": false
+      },
+      {
+        "text": " MARIA BETHÂNIA",
+        "isCorrect": false
+      },
+      {
+        "text": " SULA MIRANDA",
+        "isCorrect": true
+      },
+      {
+        "text": " RITA CADILLAC",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o nome da missa rezada no Natal?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "deriva da lenda ancestral segundo a qual à meia-noite do dia 24 de dezembro um animal teria cantado fortemente",
+    "answers": [
+      {
+        "text": "CAMPAL",
+        "isCorrect": false
+      },
+      {
+        "text": "DO GALO",
+        "isCorrect": true
+      },
+      {
+        "text": "DO VATICANO",
+        "isCorrect": false
+      },
+      {
+        "text": "DE SÉTIMO DIA",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é a orixá conhecida como “A rainha do mar”?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": "(divindade africana) feminino das religiões Candomblé e Umbanda.",
+    "answers": [
+      {
+        "text": "MAMÃE OXUM",
+        "isCorrect": false
+      },
+      {
+        "text": "IEMANJÁ",
+        "isCorrect": true
+      },
+      {
+        "text": "AXÉ",
+        "isCorrect": false
+      },
+      {
+        "text": " IANSÃ",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "No julgamento de Jesus, quem disse a frase: “Eu lavo minhas mãos”?",
+    "category": "conhecimentos gerais",
+    "level": 3,
+    "hint": " interventor e governador da Judéia",
+    "answers": [
+      {
+        "text": "BARRABÁS",
+        "isCorrect": false
+      },
+      {
+        "text": "TIBÉRIO",
+        "isCorrect": false
+      },
+      {
+        "text": "PÔNCIO PILATOS",
+        "isCorrect": true
+      },
+      {
+        "text": "JUDAS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "interventor e governador da Judéia",
+    "category": "conhecimentos gerais",
+    "level": 4,
+    "hint": "esfera sólida, composta majoritariamente de ferro",
+    "answers": [
+      {
+        "text": "MANTO",
+        "isCorrect": false
+      },
+      {
+        "text": "NÚCLEO",
+        "isCorrect": true
+      },
+      {
+        "text": "HIDROSFERA",
+        "isCorrect": false
+      },
+      {
+        "text": "LITOSFERA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o esporte praticado por Fernando Scherer, o Xuxa?",
+    "category": "esportes",
+    "level": 4,
+    "hint": "agua",
+    "answers": [
+      {
+        "text": "CICLISMO",
+        "isCorrect": false
+      },
+      {
+        "text": "VÔLEI DE PRAIA",
+        "isCorrect": false
+      },
+      {
+        "text": "NATAÇÃO",
+        "isCorrect": true
+      },
+      {
+        "text": "SURF",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem libertou os escravos em 1888?",
+    "category": "",
+    "level": 4,
+    "hint": "assinou a lei Áurea que aboliu a escravidão no Brasil",
+    "answers": [
+      {
+        "text": " JOANA D’ARC",
+        "isCorrect": false
+      },
+      {
+        "text": " ANITA GARIBALDI",
+        "isCorrect": false
+      },
+      {
+        "text": " PRINCESA ISABEL",
+        "isCorrect": true
+      },
+      {
+        "text": " IMPERATRIZ LEOPOLDINA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem fez sucesso com a personagem “Tiazinha”?",
+    "category": "conhecimentos gerais",
+    "level": 4,
+    "hint": "ela é morena",
+    "answers": [
+      {
+        "text": "SUZANA WERNER",
+        "isCorrect": false
+      },
+      {
+        "text": "JOANA PRADO",
+        "isCorrect": false
+      },
+      {
+        "text": "LETÍCIA SPILLER",
+        "isCorrect": false
+      },
+      {
+        "text": "SUZANA ALVES",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Quantos eram os anões da história “A branca de neve”?",
+    "category": "conhecimentos gerais",
+    "level": 4,
+    "hint": "é o número da Transformação, é a primeira manifestação do homem para conhecer as coisas do Espírito, as coisas de Deus, a Criação.",
+    "answers": [
+      {
+        "text": "SEIS",
+        "isCorrect": false
+      },
+      {
+        "text": "SETE",
+        "isCorrect": true
+      },
+      {
+        "text": "OITO",
+        "isCorrect": false
+      },
+      {
+        "text": "NOVE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como eram chamados os navios que traziam os escravos para o Brasil?",
+    "category": "história",
+    "level": 4,
+    "hint": "transportavam negros escravizados",
+    "answers": [
+      {
+        "text": "BRANQUEIROS",
+        "isCorrect": false
+      },
+      {
+        "text": "PESQUEIROS",
+        "isCorrect": false
+      },
+      {
+        "text": "NEGREIROS",
+        "isCorrect": false
+      },
+      {
+        "text": "COSTEIROS",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "De qual grupo de samba fez parte o humorista “Mussum”?",
+    "category": "conhecimentos gerais",
+    "level": 4,
+    "hint": "antônimo: normal, hipócrita, corrente, sabido, corriqueiro, comum, ordinário",
+    "answers": [
+      {
+        "text": "FUNDO DE QUINTAL",
+        "isCorrect": false
+      },
+      {
+        "text": " TITULARES DO RITMO",
+        "isCorrect": false
+      },
+      {
+        "text": " ORIGINAIS DO SAMBA",
+        "isCorrect": true
+      },
+      {
+        "text": " BANDA BRASIL",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como se chama o lugar ondeficam as mulheres do sultão?",
+    "category": "conhecimentos gerais",
+    "level": 4,
+    "hint": "conjunto de aposentos independentes",
+    "answers": [
+      {
+        "text": "HARÉM",
+        "isCorrect": true
+      },
+      {
+        "text": "LABIRINTO",
+        "isCorrect": false
+      },
+      {
+        "text": "COLISEU",
+        "isCorrect": false
+      },
+      {
+        "text": "CHOUPANA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quantas cores compõem o arco-íris?",
+    "category": "conhecimentos gerais",
+    "level": 4,
+    "hint": "cores principais são as que mais se destacam no fenômeno.",
+    "answers": [
+      {
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "text": "7",
+        "isCorrect": true
+      },
+      {
+        "text": "12",
+        "isCorrect": false
+      },
+      {
+        "text": "22",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o nome da mulher de Fred Flintstone?",
+    "category": "conhecimentos gerais",
+    "level": 4,
+    "hint": "signofocado do nome: “protetor decidido”",
+    "answers": [
+      {
+        "text": "BETH",
+        "isCorrect": false
+      },
+      {
+        "text": "WILMA",
+        "isCorrect": true
+      },
+      {
+        "text": "MARGARIDA",
+        "isCorrect": false
+      },
+      {
+        "text": "CLARABELA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Por quem foi dita a frase: “Abra-te Sézamo”?",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "usada para abrir a porta da caverna",
+    "answers": [
+      {
+        "text": "D. PEDRO I",
+        "isCorrect": false
+      },
+      {
+        "text": "HÉRCULES",
+        "isCorrect": false
+      },
+      {
+        "text": "ALI BABÁ",
+        "isCorrect": true
+      },
+      {
+        "text": "DUNGA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Em qual cidade está localizada a famosa estátua da Liberdade?",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "localizada nos Estados Unidos",
+    "answers": [
+      {
+        "text": "LONDRES",
+        "isCorrect": false
+      },
+      {
+        "text": " NOVA YORK",
+        "isCorrect": true
+      },
+      {
+        "text": "PARIS",
+        "isCorrect": false
+      },
+      {
+        "text": "MADRI",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual destes personagens não veste uma capa?",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "faz parte dos x-men",
+    "answers": [
+      {
+        "text": " SUPER-HOMEM",
+        "isCorrect": false
+      },
+      {
+        "text": " BATMAN",
+        "isCorrect": false
+      },
+      {
+        "text": " WOLVERINE",
+        "isCorrect": true
+      },
+      {
+        "text": " ZORRO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem é considerado o rei do mundo animal?",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "é uma espécie de mamífero carnívoro",
+    "answers": [
+      {
+        "text": "ELEFANTE",
+        "isCorrect": false
+      },
+      {
+        "text": "GORILA",
+        "isCorrect": false
+      },
+      {
+        "text": "LEÃO",
+        "isCorrect": true
+      },
+      {
+        "text": "RINOCERONTE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "é uma espécie de mamífero carnívoro",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "religião",
+    "answers": [
+      {
+        "text": "JUBIABÁ",
+        "isCorrect": false
+      },
+      {
+        "text": "BÍBLIA",
+        "isCorrect": true
+      },
+      {
+        "text": "GABRIELA, CRAVO E CANELA",
+        "isCorrect": false
+      },
+      {
+        "text": "TERRAS DO SEM FIM",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o nome do osso da coxa do ser humano?",
+    "category": "anatomia",
+    "level": 5,
+    "hint": "Forma nossa coxa",
+    "answers": [
+      {
+        "text": "FÊMUR",
+        "isCorrect": true
+      },
+      {
+        "text": "TÍBIA",
+        "isCorrect": false
+      },
+      {
+        "text": "PERÔNIO",
+        "isCorrect": false
+      },
+      {
+        "text": "ÚMERO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como se chama o espaço de tempo entre o nascer e o pôr do-sol",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "alvorecer, alvorada",
+    "answers": [
+      {
+        "text": "MADRUGADA",
+        "isCorrect": true
+      },
+      {
+        "text": "DIA",
+        "isCorrect": false
+      },
+      {
+        "text": "NOITE",
+        "isCorrect": false
+      },
+      {
+        "text": "SEMANA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Os nomes Batman e Rainman referem-se a quê?",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "conhecido como sétima arte",
+    "answers": [
+      {
+        "text": " ARTISTAS DE TEATRO",
+        "isCorrect": false
+      },
+      {
+        "text": " FILMES DE CINEMA",
+        "isCorrect": true
+      },
+      {
+        "text": "BANDAS DE ROCK",
+        "isCorrect": false
+      },
+      {
+        "text": "MARCAS DE CIGARRO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "De acordo com o ditado, o que “não adianta chorar”?",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "derivado: queijo",
+    "answers": [
+      {
+        "text": "FOLHAS CAÍDAS",
+        "isCorrect": false
+      },
+      {
+        "text": "LEITE DERRAMADO",
+        "isCorrect": true
+      },
+      {
+        "text": "DOCE QUEIMADO",
+        "isCorrect": false
+      },
+      {
+        "text": "PÃO VELHO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como se chama o boneco controlado por cordas?",
+    "category": "conhecimentos gerais",
+    "level": 5,
+    "hint": "Pequena figura de madeira ou de papelão que um homem, oculto atrás de uma tela, movimenta com os dedos ou por meio de cordéis",
+    "answers": [
+      {
+        "text": "ROBÔ",
+        "isCorrect": false
+      },
+      {
+        "text": "MARIONETE",
+        "isCorrect": true
+      },
+      {
+        "text": "ANDRÓIDE",
+        "isCorrect": false
+      },
+      {
+        "text": "MANEQUIM",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como são chamados os pedaços de gelo que caem durante a chuva?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "tipo de precipitação atmosférica da água em seu estado sólido",
+    "answers": [
+      {
+        "text": "GRANITO",
+        "isCorrect": false
+      },
+      {
+        "text": "GRANIZO",
+        "isCorrect": true
+      },
+      {
+        "text": "PICOLÉ",
+        "isCorrect": false
+      },
+      {
+        "text": "NEVE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual Deus é descrito como uma criança gorducha com arco e flecha?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "simbolo do dia dos namorados",
+    "answers": [
+      {
+        "text": "CUPIDO",
+        "isCorrect": true
+      },
+      {
+        "text": "ZEUS",
+        "isCorrect": false
+      },
+      {
+        "text": "MERCÚRIO",
+        "isCorrect": false
+      },
+      {
+        "text": "NETUNO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "No desenho “Papa-léguas” qual é o som feito pela ave corredora?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "buzina",
+    "answers": [
+      {
+        "text": " PING! PING!",
+        "isCorrect": false
+      },
+      {
+        "text": " UGA! UGA!",
+        "isCorrect": false
+      },
+      {
+        "text": " BIP! BIP!",
+        "isCorrect": true
+      },
+      {
+        "text": "VRUM! VRUM!",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual destes alimentos devemos consumir em menor quantidade?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "é uma classe de lipídios",
+    "answers": [
+      {
+        "text": "VEGETAIS",
+        "isCorrect": false
+      },
+      {
+        "text": "GORDURAS",
+        "isCorrect": true
+      },
+      {
+        "text": "LEGUMES",
+        "isCorrect": false
+      },
+      {
+        "text": "FRUTAS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "O que Cinderela perdeu ao sair do baile do palácio real?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "apareceram na Mesopotâmia e no Egito, 5 mil anos antes de Cristo",
+    "answers": [
+      {
+        "text": "BOLSA",
+        "isCorrect": false
+      },
+      {
+        "text": "LUVA",
+        "isCorrect": false
+      },
+      {
+        "text": "CARTEIRA DE MOTORISTA",
+        "isCorrect": false
+      },
+      {
+        "text": "SAPATO DE CRISTAL",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Como se chama a luz que guia os navios em áreas de risco?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "estrutura elevada, habitualmente uma torre, equipada com um potente aparelho ótico dotado de fontes de luz e espelhos refletores",
+    "answers": [
+      {
+        "text": "VELA",
+        "isCorrect": false
+      },
+      {
+        "text": "FAROL",
+        "isCorrect": true
+      },
+      {
+        "text": "FOGUEIRA",
+        "isCorrect": false
+      },
+      {
+        "text": "LAMPARINA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Em qual jogo o ganhador grita o nome do jogo em sinal de vitória?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "cartões divididos em quadrados numerados que devem ser preenchidos de maneira previamente combinada, à proporção que os números vão sendo sorteados",
+    "answers": [
+      {
+        "text": "ESCONDE-ESCONDE",
+        "isCorrect": false
+      },
+      {
+        "text": "BINGO",
+        "isCorrect": true
+      },
+      {
+        "text": "BANCO IMOBILIÁRIO",
+        "isCorrect": false
+      },
+      {
+        "text": "XADREZ",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Um analgésico é um agente para:",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "paracetamol",
+    "answers": [
+      {
+        "text": "TRATAMENTO DO INTESTINO",
+        "isCorrect": false
+      },
+      {
+        "text": "ALÍVIO DE ESTRESSE",
+        "isCorrect": false
+      },
+      {
+        "text": "ALÍVIO DA DOR",
+        "isCorrect": true
+      },
+      {
+        "text": "TRATAMENTO DA CASPA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é a cidade do Batman?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "Cidade",
+    "answers": [
+      {
+        "text": "GOTHAM CITY",
+        "isCorrect": true
+      },
+      {
+        "text": "METRÓPOLIS",
+        "isCorrect": false
+      },
+      {
+        "text": "PLEASANTVILLE",
+        "isCorrect": false
+      },
+      {
+        "text": "ANYTOWN",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "De que é feito o pé-de-moleque?",
+    "category": "conhecimentos gerais",
+    "level": 6,
+    "hint": "dicotiledônea, pertencente à família Fabaceae, subfamília Papilonoideae, gênero Arachis, considerada uma das oleaginosas mais produzidas mundialmente",
+    "answers": [
+      {
+        "text": "AMENDOIM",
+        "isCorrect": true
+      },
+      {
+        "text": "CASTANHA",
+        "isCorrect": false
+      },
+      {
+        "text": "ALCAPARRA",
+        "isCorrect": false
+      },
+      {
+        "text": "ABACATE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "O que Rapunzel jogava pela janela?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "punhado de fios, divididos em três ou mais partes e entrelaçados",
+    "answers": [
+      {
+        "text": "PERNA",
+        "isCorrect": false
+      },
+      {
+        "text": "BRAÇO",
+        "isCorrect": false
+      },
+      {
+        "text": "FAMÍLIA",
+        "isCorrect": false
+      },
+      {
+        "text": "TRANÇA",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "O que se joga na neve para ajudar a derretê-la?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "sódio",
+    "answers": [
+      {
+        "text": "AÇÚCAR",
+        "isCorrect": false
+      },
+      {
+        "text": "ORÉGANO",
+        "isCorrect": false
+      },
+      {
+        "text": "SAL",
+        "isCorrect": true
+      },
+      {
+        "text": "AGUA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual desses heróis de ficção usa uma máscara?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "cavaleiro talentoso, seu fiel cavalo é um cavalo negro chamado Tornado",
+    "answers": [
+      {
+        "text": "ROBIN HOOD",
+        "isCorrect": false
+      },
+      {
+        "text": "SIMBAD",
+        "isCorrect": false
+      },
+      {
+        "text": "INDIANA JONES",
+        "isCorrect": false
+      },
+      {
+        "text": "ZORRO",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Quantos anos tem um milênio?",
+    "category": "matemática",
+    "level": 7,
+    "hint": "1 década tem 10 anos",
+    "answers": [
+      {
+        "text": "100",
+        "isCorrect": false
+      },
+      {
+        "text": "500",
+        "isCorrect": true
+      },
+      {
+        "text": "1.000",
+        "isCorrect": false
+      },
+      {
+        "text": "10.000",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Quanto tempo a Terra leva para completar uma órbita ao redor do sol?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "365",
+    "answers": [
+      {
+        "text": "UM ANO",
+        "isCorrect": true
+      },
+      {
+        "text": "UM MÊS",
+        "isCorrect": false
+      },
+      {
+        "text": "UMA SEMANA",
+        "isCorrect": false
+      },
+      {
+        "text": "UM SÉCULO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Onde a mamãe canguru carrega o filhote?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "mulher usa",
+    "answers": [
+      {
+        "text": "NA ORELHA",
+        "isCorrect": false
+      },
+      {
+        "text": "NAS COSTAS",
+        "isCorrect": false
+      },
+      {
+        "text": "NA BOCA",
+        "isCorrect": false
+      },
+      {
+        "text": "NA BOLSA",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Como é o nome da cabeleira que envolve a cabeça do leão?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "crina",
+    "answers": [
+      {
+        "text": "TOPETE",
+        "isCorrect": false
+      },
+      {
+        "text": "CACHO",
+        "isCorrect": false
+      },
+      {
+        "text": "JUBA",
+        "isCorrect": true
+      },
+      {
+        "text": "PERUCA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "“Um por todos e todos por um” é o grito de qual destes grupos?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "romance histórico escrito pelo francês Alexandre Dumas",
+    "answers": [
+      {
+        "text": "EXTRATERRESTRES",
+        "isCorrect": false
+      },
+      {
+        "text": "FAMÍLIA ROBINSON",
+        "isCorrect": false
+      },
+      {
+        "text": "POWER RANGERS",
+        "isCorrect": false
+      },
+      {
+        "text": "TRÊS MOSQUETEIROS",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "O que é a morsa?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "vive nas regiões costeiras do oceano Ártico",
+    "answers": [
+      {
+        "text": "UM RÉPTIL",
+        "isCorrect": false
+      },
+      {
+        "text": "UM MAMÍFERO",
+        "isCorrect": true
+      },
+      {
+        "text": "UM PEIXE",
+        "isCorrect": false
+      },
+      {
+        "text": "UM CRUSTÁCEO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual personagem de desenho animado é rico e pão-duro?",
+    "category": "conhecimentos gerais",
+    "level": 7,
+    "hint": "é um pato",
+    "answers": [
+      {
+        "text": "TIO PATINHAS",
+        "isCorrect": true
+      },
+      {
+        "text": "PATETA",
+        "isCorrect": false
+      },
+      {
+        "text": "MICKEY",
+        "isCorrect": false
+      },
+      {
+        "text": "MICKEY",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o único mamífero que pode voar?",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "acrobata do ar",
+    "answers": [
+      {
+        "text": "PATO",
+        "isCorrect": false
+      },
+      {
+        "text": "MORCEGO",
+        "isCorrect": true
+      },
+      {
+        "text": "ANDORINHA",
+        "isCorrect": false
+      },
+      {
+        "text": "URUBU",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "A que classe de animais o pingüim pertence?",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "presença de penas e a ausência de dentes",
+    "answers": [
+      {
+        "text": "PEIXES",
+        "isCorrect": false
+      },
+      {
+        "text": "MAMÍFEROS",
+        "isCorrect": false
+      },
+      {
+        "text": "AVES",
+        "isCorrect": true
+      },
+      {
+        "text": "FELINOS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como se chamava a atriz de cinema que se tornou princesa de Mônaco?",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "casou com o príncipe Rainier, em abril de 1956",
+    "answers": [
+      {
+        "text": "GRACE KELLY",
+        "isCorrect": false
+      },
+      {
+        "text": "GRETA GARBO",
+        "isCorrect": true
+      },
+      {
+        "text": "CATHERINE DENEUVE",
+        "isCorrect": false
+      },
+      {
+        "text": "BRIGITTE BARDOT",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como os cavalos dormem?",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "cai em ... e corre deitado",
+    "answers": [
+      {
+        "text": "EM PÉ",
+        "isCorrect": true
+      },
+      {
+        "text": "DEITADOS",
+        "isCorrect": false
+      },
+      {
+        "text": "DE LADO",
+        "isCorrect": false
+      },
+      {
+        "text": "DE PONTA-CABEÇA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual a capital do Canadá?",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "na província de Ontário",
+    "answers": [
+      {
+        "text": "MONTREAL",
+        "isCorrect": false
+      },
+      {
+        "text": "OTTAWA",
+        "isCorrect": true
+      },
+      {
+        "text": "VANCOUVER",
+        "isCorrect": false
+      },
+      {
+        "text": "WASHINGTON",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual destes instrumentos musicais é de sopro?",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "Fabricado em metal",
+    "answers": [
+      {
+        "text": "VIOLINO",
+        "isCorrect": false
+      },
+      {
+        "text": "SAXOFONE",
+        "isCorrect": true
+      },
+      {
+        "text": "PIANO",
+        "isCorrect": false
+      },
+      {
+        "text": "VIOLÃO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual foi o último presidente militar do Brasil?",
+    "category": "historia",
+    "level": 8,
+    "hint": "João Baptista",
+    "answers": [
+      {
+        "text": "COSTA E SILVA",
+        "isCorrect": false
+      },
+      {
+        "text": "GEISEL",
+        "isCorrect": false
+      },
+      {
+        "text": "FIGUEIREDO",
+        "isCorrect": true
+      },
+      {
+        "text": "MÉDICI",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Nos desenhos de Walt Disney, que animal é o Mickey",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "roedor da família dos murídeos",
+    "answers": [
+      {
+        "text": "COELHO",
+        "isCorrect": false
+      },
+      {
+        "text": "CAMUNDONGO",
+        "isCorrect": true
+      },
+      {
+        "text": "ESQUILO",
+        "isCorrect": false
+      },
+      {
+        "text": "GAMBÁ",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem é o ator principal do filme “Conan, o Bárbaro”?",
+    "category": "conhecimentos gerais",
+    "level": 8,
+    "hint": "político austro-americano",
+    "answers": [
+      {
+        "text": "TOM CRUISE",
+        "isCorrect": false
+      },
+      {
+        "text": "LEONARDO DI CAPRIO",
+        "isCorrect": false
+      },
+      {
+        "text": "ARNOLD SCHWARZENEGGER",
+        "isCorrect": true
+      },
+      {
+        "text": "BRUCE LEE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual foi o filme brasileiro indicado para o Oscar em 1999?",
+    "category": "cinema",
+    "level": 8,
+    "hint": "Fernanda Montenegro",
+    "answers": [
+      {
+        "text": "O QUATRILHO",
+        "isCorrect": false
+      },
+      {
+        "text": "A VIDA É BELA",
+        "isCorrect": false
+      },
+      {
+        "text": "AUTO DA COMPADECIDA",
+        "isCorrect": false
+      },
+      {
+        "text": "CENTRAL DO BRASIL",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "O momento em que o sol fica situado exatamente sobre o Equador chama-se:",
+    "category": "geografia",
+    "level": 9,
+    "hint": "atinge seu limite máximo ao Norte ou ao Sul",
+    "answers": [
+      {
+        "text": "EQUINÓCIO",
+        "isCorrect": false
+      },
+      {
+        "text": "SOLSTÍCIO",
+        "isCorrect": true
+      },
+      {
+        "text": "SOLSTICIAL",
+        "isCorrect": false
+      },
+      {
+        "text": "SOLITUDE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem foi o provável assassino de John Kennedy?",
+    "category": "historia",
+    "level": 9,
+    "hint": "22 de novembro de 1963",
+    "answers": [
+      {
+        "text": "ALEXANDER BURR",
+        "isCorrect": false
+      },
+      {
+        "text": "LEE HARVEY OSWALD",
+        "isCorrect": true
+      },
+      {
+        "text": "BILLY THE KID",
+        "isCorrect": false
+      },
+      {
+        "text": "ELIOTT NESS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Em que festa se comemora a Ressurreição de Cristo?",
+    "category": "conhecimentos gerais",
+    "level": 9,
+    "hint": "iniciada pelos judeus",
+    "answers": [
+      {
+        "text": "PÁSCOA",
+        "isCorrect": true
+      },
+      {
+        "text": "NATAL",
+        "isCorrect": false
+      },
+      {
+        "text": "ANO-NOVO",
+        "isCorrect": false
+      },
+      {
+        "text": "DOMINGO DE RAMOS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Como se chama o estado em que o paciente perde a consciência?",
+    "category": "ciencias",
+    "level": 9,
+    "hint": "paciente não consegue abrir os olhos",
+    "answers": [
+      {
+        "text": "ALÉRGICO",
+        "isCorrect": false
+      },
+      {
+        "text": "LÚCIDO",
+        "isCorrect": false
+      },
+      {
+        "text": "FEBRIL",
+        "isCorrect": false
+      },
+      {
+        "text": "DE COMA",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Quem assumiu a Presidência da República com a morte de Tancredo Neves?",
+    "category": "historia",
+    "level": 9,
+    "hint": "tem origem no hebraico",
+    "answers": [
+      {
+        "text": "FERNANDO COLLOR",
+        "isCorrect": false
+      },
+      {
+        "text": "JOSÉ SARNEY",
+        "isCorrect": true
+      },
+      {
+        "text": "FERNANDO HENRIQUE CARDOSO",
+        "isCorrect": false
+      },
+      {
+        "text": "LULA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Tuiuiú é uma espécie de:",
+    "category": "conhecimentos gerais",
+    "level": 9,
+    "hint": "Também conhecido como jaburru",
+    "answers": [
+      {
+        "text": "PÁSSARO",
+        "isCorrect": true
+      },
+      {
+        "text": "COMIDA",
+        "isCorrect": false
+      },
+      {
+        "text": "CARRO",
+        "isCorrect": false
+      },
+      {
+        "text": "ROUPA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual destes nomes pertenceu a um navio de Cristóvão Colombo?",
+    "category": "historia",
+    "level": 9,
+    "hint": "município do estado do Rio Grande do Su",
+    "answers": [
+      {
+        "text": "EL SAVADOR",
+        "isCorrect": false
+      },
+      {
+        "text": "REDENTOR",
+        "isCorrect": false
+      },
+      {
+        "text": "SANTA MARIA",
+        "isCorrect": true
+      },
+      {
+        "text": "SANTA MARIA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "O sol pode ser classificado de:",
+    "category": "ciencias",
+    "level": 9,
+    "hint": "corpo celeste produtor e emissor de energia, com luz própria",
+    "answers": [
+      {
+        "text": "METEORO",
+        "isCorrect": false
+      },
+      {
+        "text": "COMETA",
+        "isCorrect": false
+      },
+      {
+        "text": "ESTRELA",
+        "isCorrect": true
+      },
+      {
+        "text": "PLANETA",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual desses episódios influenciou a Inconfidência Mineira?",
+    "category": "historia",
+    "level": 9,
+    "hint": "torre eiffel",
+    "answers": [
+      {
+        "text": "PRIMEIRA GUERRA MUNDIAL",
+        "isCorrect": false
+      },
+      {
+        "text": "REVOLUÇÃO FRANCESA",
+        "isCorrect": true
+      },
+      {
+        "text": "REVOLUÇÃO RUSSA",
+        "isCorrect": false
+      },
+      {
+        "text": "SEGUNDA GUERRA MUNDIAL",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Que produto teve grande influência sobre o desenvolvimento de São Paulo, no século XIX?",
+    "category": "historia",
+    "level": 9,
+    "hint": "era proibida aos cristãos e somente foi liberada após o papa Clemente VIII provar",
+    "answers": [
+      {
+        "text": "CAFÉ",
+        "isCorrect": true
+      },
+      {
+        "text": "CANA-DE-AÇÚCAR",
+        "isCorrect": false
+      },
+      {
+        "text": "OURO",
+        "isCorrect": false
+      },
+      {
+        "text": "PAU-BRASIL",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Quem disse a frase “Eureca, eureca”?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "",
+    "answers": [
+      {
+        "text": "ARISTÓTELES",
+        "isCorrect": false
+      },
+      {
+        "text": "GALILEU GALILEI",
+        "isCorrect": true
+      },
+      {
+        "text": "ALEXANDRE, O GRANDE",
+        "isCorrect": false
+      },
+      {
+        "text": "ARQUIMEDES",
+        "isCorrect": true
+      }
+    ]
+  },
+
+  {
+    "text": "Quem inventou a máquina a vapor?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "fabricante de instrumentos londrino",
+    "answers": [
+      {
+        "text": "JAMES DEAN",
+        "isCorrect": false
+      },
+      {
+        "text": "JAMES WATT",
+        "isCorrect": true
+      },
+      {
+        "text": "JAMES TAYLOR",
+        "isCorrect": false
+      },
+      {
+        "text": "JAMES WOLFE",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Essencialmente, qual é o clima predominante no Brasil?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "caracterizado pela alta temperatura e o elevado teor de umidade",
+    "answers": [
+      {
+        "text": "ÁRIDO",
+        "isCorrect": false
+      },
+      {
+        "text": "SUBTROPICAL",
+        "isCorrect": false
+      },
+      {
+        "text": "TROPICAL",
+        "isCorrect": true
+      },
+      {
+        "text": "EQUATORIAL",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Para que máquina Elicha Graves Otis inventou um sistema de segurança?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "baseado em trilhos serrilhados que prendiam a plataforma caso ela perdesse a sustentação.",
+    "answers": [
+      {
+        "text": "ÔNIBUS",
+        "isCorrect": false
+      },
+      {
+        "text": "TREM",
+        "isCorrect": true
+      },
+      {
+        "text": "ELEVADOR",
+        "isCorrect": false
+      },
+      {
+        "text": "TÁXI",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o especialista que cuida dos pés?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "É indicado para atenuar calos e diminuir a aspereza dos pés",
+    "answers": [
+      {
+        "text": "CARDIOLOGISTA",
+        "isCorrect": false
+      },
+      {
+        "text": "PEDICURO",
+        "isCorrect": true
+      },
+      {
+        "text": "DENTISTA",
+        "isCorrect": false
+      },
+      {
+        "text": "PSICÓLOGO",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Que projeto foi criado em 1967 para alfabetizar adultos e adolescentes brasileiros?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "Movimento brasileiro",
+    "answers": [
+      {
+        "text": "SOBRAL",
+        "isCorrect": false
+      },
+      {
+        "text": "MOBRAL",
+        "isCorrect": true
+      },
+      {
+        "text": "SUDENE",
+        "isCorrect": false
+      },
+      {
+        "text": "MISTRAL",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Qual é o nome do clássico do cinema em que Humphrey Bogart e Ingrid Bergman atuaram?",
+    "category": "cinema",
+    "level": 10,
+    "hint": " filme norte-americano de 1942, do gênero drama romântico",
+    "answers": [
+      {
+        "text": "CASABLANCA",
+        "isCorrect": true
+      },
+      {
+        "text": "ETERNO CONFLITO",
+        "isCorrect": false
+      },
+      {
+        "text": "CASANOVA",
+        "isCorrect": false
+      },
+      {
+        "text": "OS PÁSSAROS",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "Em que ano o Brasil sediou a Copa do Mundo de Futebol?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "MCML",
+    "answers": [
+      {
+        "text": "1930",
+        "isCorrect": false
+      },
+      {
+        "text": "1954",
+        "isCorrect": false
+      },
+      {
+        "text": "1950",
+        "isCorrect": true
+      },
+      {
+        "text": "1974",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "O brasileiro Oswaldo Cruz foi um?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "Ele pode ser generalista ou especializado",
+    "answers": [
+      {
+        "text": "MÉDICO",
+        "isCorrect": true
+      },
+      {
+        "text": "ADVOGADO",
+        "isCorrect": false
+      },
+      {
+        "text": "PADRE",
+        "isCorrect": false
+      },
+      {
+        "text": "LUTADOR",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "text": "De qual país Juan Perón foi presidente?",
+    "category": "conhecimentos gerais",
+    "level": 10,
+    "hint": "O tango",
+    "answers": [
+      {
+        "text": "BRASIL",
+        "isCorrect": false
+      },
+      {
+        "text": "PORTUGAL",
+        "isCorrect": false
+      },
+      {
+        "text": "INGLATERRA",
+        "isCorrect": false
+      },
+      {
+        "text": "ARGENTINA",
+        "isCorrect": true
+      }
+    ]
+  }
+]

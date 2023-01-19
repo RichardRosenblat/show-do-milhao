@@ -35,13 +35,7 @@ export const Signup = () => {
 
   return (
     <C.Container>
-<<<<<<< HEAD
       <div className='subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]' />
-=======
-      <div className="subtitle">SHOW DO MILHAO LEVEL UP</div>
-      <div className="bg-[#fff01f80] my-[35px] h-px w-full" />
-      <div className="subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]" />
->>>>>>> 5368bd23e3eb5e9460b1cb0f13f2a5dbf71bec49
       <C.Content>
         <C.Label>Crie sua conta</C.Label>
         <Input

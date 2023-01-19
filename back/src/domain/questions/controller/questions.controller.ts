@@ -1,45 +1,51 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+  Query,
 } from '@nestjs/common';
-import { QuestionsService } from '../repository/questions.service';
-import { CreateQuestionDto } from '../dto/create-question.dto';
-import { UpdateQuestionDto } from '../dto/update-question.dto';
+import { QuestionsCommand } from '../command/questions.command';
+import { CreateQuestionDTO } from '../dto/createQuestion.dto';
+import { UpdateQuestionDTO } from '../dto/updateQuestion.dto';
 
-@Controller('questions')
+@Controller('/questions')
 export class QuestionsController {
-  constructor(private readonly questionsService: QuestionsService) {}
-
-  @Post()
-  create(@Body() createQuestionDto: CreateQuestionDto) {
-    return this.questionsService.create(createQuestionDto);
-  }
+  constructor(private readonly command: QuestionsCommand) {}
 
   @Get()
   findAll() {
-    return this.questionsService.findAll();
+    return this.command.listAll();
   }
 
-  @Get(':id')
+  @Get('/random')
+  randomByLevel(@Query('level') level: number, @Query('user') id: string) {
+    return this.command.randomByLevel(level, id);
+  }
+
+  @Post()
+  create(@Body() createQuestionDto: CreateQuestionDTO) {
+    return this.command.insert(createQuestionDto);
+  }
+
+  @Get('/:id')
   findOne(@Param('id') id: string) {
-    return this.questionsService.findOne(+id);
+    return this.command.findById(id);
   }
 
-  @Patch(':id')
+  @Patch('/:id')
   update(
     @Param('id') id: string,
-    @Body() updateQuestionDto: UpdateQuestionDto,
+    @Body() updateQuestionDto: UpdateQuestionDTO,
   ) {
-    return this.questionsService.update(+id, updateQuestionDto);
+    return this.command.update(id, updateQuestionDto);
   }
 
-  @Delete(':id')
+  @Delete('/:id')
   remove(@Param('id') id: string) {
-    return this.questionsService.remove(+id);
+    return this.command.delete(id);
   }
 }

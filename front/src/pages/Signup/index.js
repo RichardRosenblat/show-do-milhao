@@ -13,7 +13,6 @@ export const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-
   const handleSignup = () => {
     if (!name | !email | !emailConf | !password) {
       setError("Preencha todos os campos");
@@ -23,7 +22,7 @@ export const Signup = () => {
       return;
     }
 
-    const res = createUser(name, email, password)
+    const res = createUser(name, email, password);
 
     if (res) {
       setError(res);
@@ -70,7 +69,7 @@ export const Signup = () => {
         <C.LabelSignin>
           Já tem uma conta?
           <C.Strong>
-            <Link to="/">&nbsp;Entre</Link>
+            <Link to="/signin">&nbsp;Entre</Link>
           </C.Strong>
         </C.LabelSignin>
       </C.Content>

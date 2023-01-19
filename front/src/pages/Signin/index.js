@@ -19,16 +19,16 @@ const Signin = () => {
       return;
     }
 
-    const res = signIn(email, password)
-      //signin(email, password);
-      // {token: sadfnsjgdfjksgsk, userId: fsadjfdslakçf}
+    const res = signIn(email, password);
+    //signin(email, password);
+    // {token: sadfnsjgdfjksgsk, userId: fsadjfdslakçf}
 
     if (res) {
       setError(res);
       return;
     }
 
-    navigate("/home");
+    navigate("/signin");
   };
 
   return (

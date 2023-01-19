@@ -1,5 +1,5 @@
 import { getAxios } from "../../utils/axios";
 
-export function markTime(token, userId, helpType) {
+export function useHelp(token, userId, helpType) {
 	return getAxios(token).post(`/users/${userId}/help/${helpType}`);
 }

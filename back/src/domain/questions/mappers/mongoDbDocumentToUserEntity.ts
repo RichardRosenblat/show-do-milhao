@@ -3,7 +3,7 @@ import { Question } from '../entities/question.entity';
 
 
 type userLike = {
-  [key in keyof Question]: any;
+  [key in keyof Question]: unknown;
 };
 
 export function mongoDbDocumentToQuestionEntity(data: WithId<Document>) {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
+import ButtonHome from "../../components/Button-Home";
 import useAuth from "../../hooks/useAuth";
 import * as C from "./styles";
 
@@ -10,20 +10,11 @@ const Home = () => {
 
   return (
     <C.Container>
-      <C.Title>SHOW DO MILHAO LEVEL UP</C.Title>
-      <C.Container>
-        <div className="bg-[#fff01f80] my-[35px] h-px w-full" />
-        <div className="subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]" />
-      </C.Container>
+      <C.ImageContainer></C.ImageContainer>
 
-      <Button Text="Sair" onClick={() => [signout(), navigate("/signin")]}>
-        Sair
-      </Button>
-
-      <C.Container>
-        <div className="bg-[#fff01f80] my-[35px] h-px w-full" />
-        <div className="subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]" />
-      </C.Container>
+      <ButtonHome Text="Jogar" onClick={() => [signout(), navigate("/signin")]}>
+        Jogar
+      </ButtonHome>
     </C.Container>
   );
 };

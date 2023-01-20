@@ -20,11 +20,11 @@ export const Content = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  box-shadow: 0 3px 5px black;
+  box-shadow: 0 1px 2px #0003;
   background-color: #1e90ff;
-  max-width: 350px;
+  max-width: 500px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 `;
 
 export const Label = styled.label`

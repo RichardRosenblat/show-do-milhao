@@ -1,12 +1,12 @@
 import React from "react";
 import * as C from "./styles";
 
-const ButtonHome = ({ Text, onClick, Type = "button" }) => {
+const ButtonGame = ({ Text, onClick, Type = "button" }) => {
   return (
-    <C.ButtonHome type={Type} onClick={onClick}>
+    <C.ButtonGame type={Type} onClick={onClick}>
       {Text}
-    </C.ButtonHome>
+    </C.ButtonGame>
   );
 };
 
-export default ButtonHome;
+export default ButtonGame;

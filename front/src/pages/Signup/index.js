@@ -35,7 +35,7 @@ export const Signup = () => {
 
   return (
     <C.Container>
-      <div className='subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]' />
+      <div className="subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]" />
       <C.Content>
         <C.Label>Crie sua conta</C.Label>
         <Input
@@ -67,7 +67,7 @@ export const Signup = () => {
         <C.LabelSignin>
           Já tem uma conta?
           <C.Strong>
-            <Link to="/signin">&nbsp;Entre</Link>
+            <Link to="/game">&nbsp;Entre</Link>
           </C.Strong>
         </C.LabelSignin>
       </C.Content>

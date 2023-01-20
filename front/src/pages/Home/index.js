@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import ButtonHome from "../../components/Button-Game";
+import ButtonHome from "../../components/Button-Home";
 import useAuth from "../../hooks/useAuth";
 import * as C from "./styles";
 

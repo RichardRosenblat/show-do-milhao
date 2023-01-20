@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import * as C from "./styles";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
+import Button from "../../components/Button";
+import Input from "../../components/Input";
+import { createUser } from "../../services/user/signup";
+import * as C from "./styles";
 
 export const Signup = () => {
   const [name, setName] = useState("");
@@ -13,10 +13,8 @@ export const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const { signup } = useAuth();
-
   const handleSignup = () => {
-    if (!email | !emailConf | !password) {
+    if (!name | !email | !emailConf | !password) {
       setError("Preencha todos os campos");
       return;
     } else if (email !== emailConf) {
@@ -24,7 +22,7 @@ export const Signup = () => {
       return;
     }
 
-    const res = signup(email, password);
+    const res = createUser(name, email, password);
 
     if (res) {
       setError(res);
@@ -32,14 +30,12 @@ export const Signup = () => {
     }
 
     alert("Usuário cadatrado com sucesso!");
-    navigate("/");
+    navigate("/signin");
   };
 
   return (
     <C.Container>
-      <div className="subtitle">SHOW DO MILHAO LEVEL UP</div>
-      <div className="bg-[#fff01f80] my-[35px] h-px w-full" />
-      <div className="subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]" />
+      <div className='subtitle semiBold flex flex-row gap-[20px] items-center mb-[20px]' />
       <C.Content>
         <C.Label>Crie sua conta</C.Label>
         <Input
@@ -71,7 +67,7 @@ export const Signup = () => {
         <C.LabelSignin>
           Já tem uma conta?
           <C.Strong>
-            <Link to="/">&nbsp;Entre</Link>
+            <Link to="/signin">&nbsp;Entre</Link>
           </C.Strong>
         </C.LabelSignin>
       </C.Content>

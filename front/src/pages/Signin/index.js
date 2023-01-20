@@ -3,10 +3,10 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
+import { signIn } from "../../services/auth/signin";
 
 const Signin = () => {
-  const { signin } = useAuth();
+  // const { signin } = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -19,14 +19,16 @@ const Signin = () => {
       return;
     }
 
-    const res = signin(email, password);
+    const res = signIn(email, password);
+    //signin(email, password);
+    // {token: sadfnsjgdfjksgsk, userId: fsadjfdslakçf}
 
     if (res) {
       setError(res);
       return;
     }
 
-    navigate("/home");
+    navigate("/signin");
   };
 
   return (

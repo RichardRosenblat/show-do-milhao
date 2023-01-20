@@ -1,12 +1,12 @@
 import { ObjectId } from 'bson';
 import { mongoDbDocumentToUserEntity } from '../../../src/domain/users/mapper/mongoDbDocumentToUserEntity';
-import { userMockDatabase } from '../database/users.database.mock';
+import { usersMockDatabase } from '../database/users.database.mock';
 
 export const usersCommandMock = {
   findById: jest.fn((userId: string) => {
     const id = new ObjectId(userId);
-    mongoDbDocumentToUserEntity(
-      userMockDatabase.find(
+    return mongoDbDocumentToUserEntity(
+      usersMockDatabase.find(
         (user) => user._id.toHexString() === id.toHexString(),
       ),
     );

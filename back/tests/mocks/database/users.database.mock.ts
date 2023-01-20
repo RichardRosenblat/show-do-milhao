@@ -22,12 +22,12 @@ interface databaseUser {
   };
 }
 
-export let userMockDatabase: databaseUser[] = [];
+export let usersMockDatabase: databaseUser[] = [];
 
 resetMockUsersDatabase();
 
 export function resetMockUsersDatabase() {
-  userMockDatabase = [
+  usersMockDatabase = [
     {
       _id: new ObjectId(),
       answered_questions: [],
@@ -42,6 +42,22 @@ export function resetMockUsersDatabase() {
       },
       email: 'admin@admin.com',
       name: 'GameAdmin',
+      password: '$2b$10$5i.hxWtvW2vJlHa7jDGxjut2nBZbxl/ozXptZzIPUWD01T0tKceM.',
+    },
+    {
+      _id: new ObjectId(),
+      answered_questions: [],
+      correct_answers: 0,
+      errors: 0,
+      finished_date: null,
+      start_date: null,
+      active_question: null,
+      helps_used: {
+        cards: 0,
+        skips: 0,
+      },
+      email: 'manager@admin.com',
+      name: 'GameManager',
       password: '$2b$10$5i.hxWtvW2vJlHa7jDGxjut2nBZbxl/ozXptZzIPUWD01T0tKceM.',
     },
   ];

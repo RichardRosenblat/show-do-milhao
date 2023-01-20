@@ -88,11 +88,11 @@ export class UsersRepository {
     return !!user;
   }
   async markTime(id: ObjectId, type: TimeMarkTypeEnum, time: Date) {
-    this.collection.updateOne(
+    await this.collection.updateOne(
       { _id: id },
       {
         $set: {
-          [`${type}_date`]: time,
+          [type]: time,
         },
       },
     );

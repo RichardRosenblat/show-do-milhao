@@ -35,7 +35,12 @@ export const questionsRepositoryMock = {
       ({ _id }) => _id.toHexString() === id.toHexString(),
     );
 
-    const parsedAnswers = body.answers
+    const parsedAnswers: {
+      answers?: {
+        text: string;
+        isCorrect: boolean;
+      }[];
+    } = body.answers
       ? { answers: body.answers.map((answer) => ({ ...answer })) }
       : {};
     const parsedBody = { ...body, ...parsedAnswers };

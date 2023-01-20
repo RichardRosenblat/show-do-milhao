@@ -17,7 +17,7 @@ export class UsersControlsController {
   @Post('/:id/help/:type')
   @UseGuards(JwtAuthGuard)
   useHelp(@Param('id') id: string, @Param('type') helpType: string) {
-    return this.command.useHelp(id, helpType.toUpperCase());
+    return this.command.useHelp(id, helpType);
   }
 
   @Put('/:id/reset')
@@ -33,6 +33,6 @@ export class UsersControlsController {
     @Param('type') type: string,
     @Body() { time }: TimeMarkDTO,
   ) {
-    return this.command.markTime(id, type.toUpperCase(), new Date(time));
+    return this.command.markTime(id, type, new Date(time));
   }
 }

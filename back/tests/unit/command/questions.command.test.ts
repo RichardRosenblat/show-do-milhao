@@ -5,6 +5,7 @@ import {
   questionsMockDatabase,
   resetMockQuestionsDatabase,
 } from '../../mocks/database/questions.database.mock';
+import { usersMockDatabase } from '../../mocks/database/users.database.mock';
 import { questionsRepositoryMock } from '../../mocks/repository/questions.mock.repository';
 
 beforeEach(() => {
@@ -82,5 +83,22 @@ describe('Questions command', () => {
     expect(foundQuestionById).toStrictEqual(
       expect.objectContaining(questionsMockDatabase[0]),
     );
+  });
+  it('should return an random question of a given level', async () => {
+    const chosenLevel = questionsMockDatabase[0].level;
+    
+    const levelArray = [];
+    const expectedArray = [];
+
+    for (let i = 0; i < 5; i++) {
+      const randomQuestion = await command.randomByLevel(
+        chosenLevel,
+        usersMockDatabase[0]._id.toHexString(),
+      );
+      levelArray.push(randomQuestion.level);
+      expectedArray.push(chosenLevel)
+    }
+
+    expect(levelArray).toStrictEqual(expectedArray)
   });
 });

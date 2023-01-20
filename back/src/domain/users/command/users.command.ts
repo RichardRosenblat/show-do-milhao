@@ -52,7 +52,9 @@ export class UsersCommand {
     if (!(errors < 2) && !answerData.isCorrect) {
       if (errors + 1 === 3) {
         await this.repository.addAnsweredQuestion(new ObjectId(id), answerData);
-        throw new NotAcceptableException(UsersErrorMessagesEnum.LAST_WRONG_ANSWER);
+        throw new NotAcceptableException(
+          UsersErrorMessagesEnum.LAST_WRONG_ANSWER,
+        );
       }
       throw new BadRequestException(UsersErrorMessagesEnum.TOO_MANY_MISTAKES);
     }
@@ -65,7 +67,7 @@ export class UsersCommand {
     return this.convertToDTO(users);
   }
   async useHelp(id: string, help_used: string) {
-    const helpUsedType = HelpUsedEnum[help_used];
+    const helpUsedType = HelpUsedEnum[help_used.toUpperCase()];
 
     if (!helpUsedType) {
       throw new BadRequestException(UsersErrorMessagesEnum.WRONG_HELP_TYPE);
@@ -84,18 +86,16 @@ export class UsersCommand {
     return this.convertToDTO(helpedUser);
   }
   async markTime(id: string, type: string, time: Date) {
-    const timeMarkType = TimeMarkTypeEnum[type];
+    const timeMarkType = TimeMarkTypeEnum[type.toUpperCase()];
     if (!timeMarkType) {
-      throw new BadRequestException(UsersErrorMessagesEnum.WRONG_TIME_MARK_TYPE);
+      throw new BadRequestException(
+        UsersErrorMessagesEnum.WRONG_TIME_MARK_TYPE,
+      );
     }
 
     await this.findById(id);
     return this.convertToDTO(
-      await this.repository.markTime(
-        new ObjectId(id),
-        TimeMarkTypeEnum[type],
-        time,
-      ),
+      await this.repository.markTime(new ObjectId(id), timeMarkType, time),
     );
   }
   async resetUserData(id: string) {

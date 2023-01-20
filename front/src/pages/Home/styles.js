@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import img from "../../assets/Logo-03.png";
 
 export const Title = styled.h2``;
 
@@ -9,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 10px;
   height: 100vh;
-  background-color: #dadada;
+  background-color: white;
 `;
 
 export const Content = styled.div`
@@ -50,3 +51,17 @@ export const Strong = styled.strong`
     color: black;
   }
 `;
+
+export const ImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background-image: url(${img});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+`;
+
+export const Image = () => {
+  return <ImageContainer />;
+};

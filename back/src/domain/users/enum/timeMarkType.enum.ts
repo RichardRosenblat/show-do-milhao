@@ -1,4 +1,4 @@
 export enum TimeMarkTypeEnum {
-  START = 'start' ,
-  FINISH = 'finished',
+  START = 'start_date' ,
+  FINISH = 'finished_date',
 }

@@ -2,7 +2,7 @@ import { Body, Controller, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { UsersCommand } from '../command/users.command';
 import { AnswerDataDTO } from '../dto/answerData.dto';
 import { TimeMarkDTO } from '../dto/timeMark.dto';
-import { JwtAuthGuard } from 'src/domain/auth/guard/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
 
 @Controller('/users')
 export class UsersControlsController {
@@ -17,7 +17,7 @@ export class UsersControlsController {
   @Post('/:id/help/:type')
   @UseGuards(JwtAuthGuard)
   useHelp(@Param('id') id: string, @Param('type') helpType: string) {
-    return this.command.useHelp(id, helpType.toUpperCase());
+    return this.command.useHelp(id, helpType);
   }
 
   @Put('/:id/reset')
@@ -33,6 +33,6 @@ export class UsersControlsController {
     @Param('type') type: string,
     @Body() { time }: TimeMarkDTO,
   ) {
-    return this.command.markTime(id, type.toUpperCase(), new Date(time));
+    return this.command.markTime(id, type, new Date(time));
   }
 }

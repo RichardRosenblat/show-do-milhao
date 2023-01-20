@@ -12,7 +12,7 @@ import {
 import { QuestionsCommand } from '../command/questions.command';
 import { CreateQuestionDTO } from '../dto/createQuestion.dto';
 import { UpdateQuestionDTO } from '../dto/updateQuestion.dto';
-import { JwtAuthGuard } from 'src/domain/auth/guard/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
 
 @Controller('/questions')
 export class QuestionsController {

@@ -2,7 +2,7 @@ import { Body, Controller, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { UsersCommand } from '../command/users.command';
 import { AnswerDataDTO } from '../dto/answerData.dto';
 import { TimeMarkDTO } from '../dto/timeMark.dto';
-import { JwtAuthGuard } from 'src/domain/auth/guard/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
 
 @Controller('/users')
 export class UsersControlsController {

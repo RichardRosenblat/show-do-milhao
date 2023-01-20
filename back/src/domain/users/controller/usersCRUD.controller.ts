@@ -11,7 +11,7 @@ import {
 import { UsersCommand } from '../command/users.command';
 import { CreateUserDTO } from '../dto/createUser.dto';
 import { UpdateUserDTO } from '../dto/updateUser.dto';
-import { JwtAuthGuard } from 'src/domain/auth/guard/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/guard/jwt-auth.guard';
 
 @Controller('/users')
 export class UsersCRUDController {

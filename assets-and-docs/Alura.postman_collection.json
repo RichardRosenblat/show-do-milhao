@@ -1,0 +1,786 @@
+{
+	"info": {
+		"_postman_id": "db045962-ad85-4fdc-93d6-214bb6afde17",
+		"name": "Alura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22462608"
+	},
+	"item": [
+		{
+			"name": "follow up",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{followUpUsersHost}}",
+									"host": [
+										"{{followUpUsersHost}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list all users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{followUpUsersHost}}/users",
+									"host": [
+										"{{followUpUsersHost}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find by id user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{followUpUsersHost}}/users/:id",
+									"host": [
+										"{{followUpUsersHost}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "637e1bfc75b1cf1547f8d5f3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"wawawawa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{followUpUsersHost}}/users/:id",
+									"host": [
+										"{{followUpUsersHost}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "637e1bfc75b1cf1547f8d5f3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Dan Baker\",\r\n    \"email\": \"keyboard@was.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{followUpUsersHost}}/users",
+									"host": [
+										"{{followUpUsersHost}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{followUpUsersHost}}/users/:id",
+									"host": [
+										"{{followUpUsersHost}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "637e1bfc75b1cf1547f8d5f3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "stories",
+					"item": [
+						{
+							"name": "health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{followUpStoriesHost}}",
+									"host": [
+										"{{followUpStoriesHost}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list all stories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{followUpStoriesHost}}/v1/story",
+									"host": [
+										"{{followUpStoriesHost}}"
+									],
+									"path": [
+										"v1",
+										"story"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find by id story",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{followUpStoriesHost}}/v1/story/:id",
+									"host": [
+										"{{followUpStoriesHost}}"
+									],
+									"path": [
+										"v1",
+										"story",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "84dc1a19-fde8-4edc-9ba0-fc3ba2c3b8cc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find by user id story",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{followUpStoriesHost}}/v1/story?userId=63a34539a961c792121e585b",
+									"host": [
+										"{{followUpStoriesHost}}"
+									],
+									"path": [
+										"v1",
+										"story"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "63a34539a961c792121e585b"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update story",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\":\"wawawawa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{followUpStoriesHost}}/v1/story/:id",
+									"host": [
+										"{{followUpStoriesHost}}"
+									],
+									"path": [
+										"v1",
+										"story",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "84dc1a19-fde8-4edc-9ba0-fc3ba2c3b8cc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add story",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"title\":\"MyTitle\",\r\n   \"userId\":\"63991d8bf4448ccd235d39e3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{followUpStoriesHost}}/v1/story",
+									"host": [
+										"{{followUpStoriesHost}}"
+									],
+									"path": [
+										"v1",
+										"story"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete story",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{followUpStoriesHost}}/v1/story/:id",
+									"host": [
+										"{{followUpStoriesHost}}"
+									],
+									"path": [
+										"v1",
+										"story",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "84dc1a19-fde8-4edc-9ba0-fc3ba2c3b8cc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "showDoMilhao",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "CRUD",
+							"item": [
+								{
+									"name": "list",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users/:id",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "63c7e9fac472326a7a7d41da"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "insert",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"tedsaas@ste.com\",\r\n    \"name\": \"adsadsa\",\r\n    \"password\": \"123456789\",\r\n    \"errors\":33\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"_id\": \"12e3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users/:id",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "63c7eb1f5a4cb9da306c9abf"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users/:id",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "63c7e41d9979eaa483590274"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Other",
+							"item": [
+								{
+									"name": "answer",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"questionId\": \"63c84b7167f57e3f670d81c0\",\r\n  \"isCorrect\": true,\r\n  \"nextQuestion\": \"63c84b7167f57e3f670d81c0\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users/:id/answer",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users",
+												":id",
+												"answer"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "63c7eb1f5a4cb9da306c9abf"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "useHelp",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users/:id/help/:type",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users",
+												":id",
+												"help",
+												":type"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "63c7e9fac472326a7a7d41da"
+												},
+												{
+													"key": "type",
+													"value": "skips"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "markTime",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"time\":\"2023-01-18T14:47:13.83Z\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users/:id/time/:type",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users",
+												":id",
+												"time",
+												":type"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "63c7e9fac472326a7a7d41da"
+												},
+												{
+													"key": "type",
+													"value": "finish"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "resetUserData",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{showDoMilhaoHost}}/users/:id/reset",
+											"host": [
+												"{{showDoMilhaoHost}}"
+											],
+											"path": [
+												"users",
+												":id",
+												"reset"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "63c7e9fac472326a7a7d41da"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Questions",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{showDoMilhaoHost}}/questions",
+									"host": [
+										"{{showDoMilhaoHost}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "random by level",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{showDoMilhaoHost}}/questions/random?level=2&user=63c7eb1f5a4cb9da306c9abf",
+									"host": [
+										"{{showDoMilhaoHost}}"
+									],
+									"path": [
+										"questions",
+										"random"
+									],
+									"query": [
+										{
+											"key": "level",
+											"value": "2"
+										},
+										{
+											"key": "user",
+											"value": "63c7eb1f5a4cb9da306c9abf"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{showDoMilhaoHost}}/questions/:id",
+									"host": [
+										"{{showDoMilhaoHost}}"
+									],
+									"path": [
+										"questions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63c84b7167f57e3f670d81c0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "insert",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"fffff\",\r\n    \"category\": \"ciencias\",\r\n    \"level\": 2,\r\n    \"hint\": \"é bem grande!\",\r\n    \"answers\": [\r\n        {\r\n            \"text\": \"marca de leite\",\r\n            \"isCorrect\": false\r\n        },\r\n        {\r\n            \"text\": \"civilização antiga\",\r\n            \"isCorrect\": false\r\n        },\r\n        {\r\n            \"text\": \"marca de carro\",\r\n            \"isCorrect\": false\r\n        },\r\n        {\r\n            \"text\": \"galaxia\",\r\n            \"isCorrect\": true\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{showDoMilhaoHost}}/questions",
+									"host": [
+										"{{showDoMilhaoHost}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"level\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{showDoMilhaoHost}}/questions/:id",
+									"host": [
+										"{{showDoMilhaoHost}}"
+									],
+									"path": [
+										"questions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63c83d06ac91a19f9697b3b1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{showDoMilhaoHost}}/questions/:id",
+									"host": [
+										"{{showDoMilhaoHost}}"
+									],
+									"path": [
+										"questions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63c83d06ac91a19f9697b3b1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
